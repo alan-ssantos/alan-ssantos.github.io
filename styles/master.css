@@ -17,8 +17,8 @@ h2{
 }
 
 p, a{
-    font-size: 18px;
-    line-height: calc(18px * 1.4);
+    font-size: 22px;
+    line-height: calc(22px * 1.4);
 }
 
 .container-fluid{
@@ -43,7 +43,7 @@ p, a{
 .full{
     height: 100vh;
     min-height: 640px;
-    padding-top: 50px;
+    margin-top: 50px;
 }
 
 .nav{
@@ -75,7 +75,6 @@ p, a{
 
 #idOpenMenu:hover{
     background: rgba(0, 0, 0, 0.1);
-    /* box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3); */
     border-radius: 18px;
 }
 
@@ -168,10 +167,24 @@ p, a{
     text-transform: uppercase;
 }
 
-.bio p{
-    font-size: 28px;
-    font-weight: 100;
-    line-height: calc(28px * 1.4);
+.about{
+    flex-flow: row wrap;
+    align-content: space-evenly;
+}
+
+.bio{
+    /* font-weight: 100; */
+}
+
+.skills ul{
+    padding-left: 1.5rem;
+    list-style: initial;
+}
+
+.skills ul li{
+    font-size: 22px;
+    /* font-weight: 100; */
+    line-height: calc(22px * 1.4);
 }
 
 .bg-deg{
