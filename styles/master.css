@@ -36,8 +36,10 @@ p, a{
 
 .col{
     flex: 1;
-    align-self: center;
+    align-self: baseline;
     min-width: 300px;
+
+    margin: 0 2rem;
 }
 
 .full{
@@ -169,7 +171,7 @@ p, a{
 
 .about{
     flex-flow: row wrap;
-    align-content: space-evenly;
+    align-content: center;
 }
 
 .bio{
@@ -190,7 +192,7 @@ p, a{
 .bg-deg{
     background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(161,255,206,1) 0%, rgba(250,255,209,1) 90% );
     background-attachment: fixed;
-    background-size: cover;
+    /* background-size: cover; */
 }
 .bg-white{
     background: white;
