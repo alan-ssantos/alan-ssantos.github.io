@@ -21,6 +21,11 @@ p, a{
     line-height: calc(22px * 1.4);
 }
 
+img{
+    width: 80%;
+    vertical-align: text-top;
+}
+
 .container-fluid{
     width: 100%;
     display: flex;
@@ -36,9 +41,8 @@ p, a{
 
 .col{
     flex: 1;
-    align-self: baseline;
+    align-self: center;
     min-width: 300px;
-    
     margin: 0 2rem;
 }
 
@@ -183,6 +187,26 @@ p, a{
     font-size: 22px;
     /* font-weight: 100; */
     line-height: calc(22px * 1.4);
+}
+
+.card{
+    display: flex;
+    align-self: center;
+}
+
+.card-thumb{
+    width: 100%;
+    max-width: 300px;
+    height: 100%;
+    max-height: 300px;
+    background: blue;
+    align-content: center;
+}
+
+.card-main{
+    position: relative;
+    background: white;
+    top: -300px;
 }
 
 .bg-deg{
