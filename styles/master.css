@@ -169,13 +169,9 @@ p, a{
     text-transform: uppercase;
 }
 
-.about{
+.bio, .skills{
     flex-flow: row wrap;
-    align-content: center;
-}
-
-.bio{
-    /* font-weight: 100; */
+    /* align-content: center; */
 }
 
 .skills ul{
