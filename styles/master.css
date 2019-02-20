@@ -52,6 +52,12 @@ img{
     margin-top: 50px;
 }
 
+.mid{
+    height: 30vh;
+    min-height: 420px;
+    margin-top: 50px;
+}
+
 .nav{
     position: fixed;
     top: 0; left: 0;
@@ -191,7 +197,13 @@ img{
 
 .card{
     display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
     align-self: center;
+}
+
+.card-body{
+    display: flex;
 }
 
 .card-thumb{
@@ -204,9 +216,7 @@ img{
 }
 
 .card-main{
-    position: relative;
     background: white;
-    top: -300px;
 }
 
 .bg-deg{
@@ -218,6 +228,20 @@ img{
     background: white;
 }
 
+@media (max-width: 767px){
+
+    .col{
+        text-align: center;
+    }
+
+    .mid{
+        height: 100%;
+    }
+
+    .skills{
+        flex-flow: row wrap-reverse;
+    }
+}
 
 @media (max-width: 640px){
     .menu-list{
@@ -226,6 +250,7 @@ img{
     .menu-item{
         margin: 10px 0px;
     }
+
 } 
 
 
