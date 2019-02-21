@@ -11,3 +11,7 @@ function menuControl(){
         menu.classList.replace('open', 'close');
     }
 }
+
+window.onresize = function(){
+    console.log("adksgdihsg");
+};
