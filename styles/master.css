@@ -26,6 +26,7 @@ img{
     vertical-align: text-top;
 }
 
+/* LAYOUT */
 .container-fluid{
     width: 100%;
     display: flex;
@@ -58,6 +59,7 @@ img{
     margin-top: 50px;
 }
 
+/*BARRA DE NAVEGAÇÃO*/
 .nav{
     position: fixed;
     top: 0; left: 0;
@@ -90,6 +92,13 @@ img{
     border-radius: 18px;
 }
 
+#idCloseMenu:hover{
+    background: rgba(255, 0, 0, 0.3);
+    border-radius: 50%;
+    padding: .8rem 1.24rem;
+}
+
+/* MENU SOBREPOSTO*/
 .menu{
     position: fixed;
     top: 0; left: 0;
@@ -97,10 +106,15 @@ img{
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
+    align-items: center;
     width: 100%;
     height: 100%;
     background: white;
     transition: 0.5s;
+}
+
+.menu-body{
+    justify-content: center;
 }
 
 .menu-list{
@@ -128,18 +142,17 @@ img{
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     /* text-shadow: 0px 0px 2px #4158D0; */
-    
 }
+
 .close{
     top: -100%;
 }
+
 .open{
     top: 0;
 }
 
-
-/* MAIN */
-
+/*SESSAO 1 - MAIN */
 .main{
     display: flex;
     flex-flow: column wrap;
@@ -179,6 +192,7 @@ img{
     text-transform: uppercase;
 }
 
+/* SESSAO 2 - SOBRE, FORMAÇÕES E HABILIDADES */
 .bio, .skills{
     flex-flow: row wrap;
     /* align-content: center; */
@@ -195,6 +209,7 @@ img{
     line-height: calc(22px * 1.4);
 }
 
+/*SESSAO 3 - CARDS DOS PROJETOS(PORTIFOLIO)*/
 .card{
     display: flex;
     flex-flow: row wrap;
@@ -204,21 +219,44 @@ img{
 
 .card-body{
     display: flex;
+    flex: 1;    
+    flex-flow: row nowrap;
+    justify-content: center;
 }
 
 .card-thumb{
-    width: 100%;
-    max-width: 300px;
-    height: 100%;
     max-height: 300px;
-    background: blue;
     align-content: center;
 }
 
-.card-main{
-    background: white;
+.card-thumb img{
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    vertical-align: middle;
+    border: 10px solid black;
 }
 
+.card-main{
+    flex-basis: 1;
+    max-width: 640px;
+    padding: 10px
+    /* max-width: 300px; */
+}
+
+/* .card-pag{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    background: white;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;    
+} */
+
+
+
+/* BACKGROUNDS */
 .bg-deg{
     background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(161,255,206,1) 0%, rgba(250,255,209,1) 90% );
     background-attachment: fixed;
@@ -227,20 +265,17 @@ img{
 .bg-white{
     background: white;
 }
+.bg-black{
+    background: #111;   
+}
 
+/*AJUSTES DE LAYOUT PARA MOBILE*/ 
 @media (max-width: 767px){
-
-    .col{
-        text-align: center;
-    }
-
-    .mid{
-        height: 100%;
-    }
-
-    .skills{
-        flex-flow: row wrap-reverse;
-    }
+    .col{ text-align: center; }
+    
+    .mid{ height: 100%; }
+    
+    .skills{ flex-flow: row wrap-reverse; }
 }
 
 @media (max-width: 640px){
@@ -250,16 +285,12 @@ img{
     .menu-item{
         margin: 10px 0px;
     }
-
+    
+    .card-body{
+        flex-flow: row wrap;
+    }
+    .card-main{ 
+        max-width: 300px;
+    }   
+    
 } 
-
-
-
-
-
-
-
-
-
-
-
