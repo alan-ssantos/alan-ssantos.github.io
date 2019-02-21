@@ -50,13 +50,13 @@ img{
 .full{
     height: 100vh;
     min-height: 640px;
-    margin-top: 50px;
+    margin-top: 48px;
 }
 
 .mid{
     height: 30vh;
     min-height: 420px;
-    margin-top: 50px;
+    margin-top: 48px;
 }
 
 /*BARRA DE NAVEGAÇÃO*/
@@ -64,7 +64,7 @@ img{
     position: fixed;
     top: 0; left: 0;
     z-index: 10;
-    height: 50px;
+    height: 48px;
 }
 
 .navbar{
