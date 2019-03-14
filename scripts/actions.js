@@ -38,6 +38,7 @@ function setCard() {
     }
     
     settings.first();
+    var intervalo = setInterval(settings.next, 5000);
 
     document.querySelector(".next").addEventListener("click", settings.next, false);
     document.querySelector(".prev").addEventListener("click", settings.prev, false);
