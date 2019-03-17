@@ -18,28 +18,34 @@ function setCard() {
     var card = document.getElementsByClassName('card-body');
     var max = card.length - 1;
     var actual = 0;
-     
+    
     var settings = {
         first: function(){
             card[actual].classList.add('ativo');
         },
-        next: function(){
+        slide:function(){
             card[actual].classList.remove('ativo');
             actual == max ? actual = 0 : actual++;
-            console.log(actual);
             card[actual].classList.add('ativo');
         },
+        next: function(){
+            clearInterval(intervalo);
+            card[actual].classList.remove('ativo');
+            actual == max ? actual = 0 : actual++;
+            card[actual].classList.add('ativo');
+            intervalo = setInterval(settings.slide, 5000);
+        },
         prev: function(){
+            clearInterval(intervalo);
             card[actual].classList.remove('ativo');
             actual == 0 ? actual = max : actual--;
-            console.log(actual);
             card[actual].classList.add('ativo');
+            intervalo = setInterval(settings.slide, 5000);
         }
     }
     
     settings.first();
-    var intervalo = setInterval(settings.next, 5000);
-
+    var intervalo = setInterval(settings.slide, 5000);
     document.querySelector(".next").addEventListener("click", settings.next, false);
     document.querySelector(".prev").addEventListener("click", settings.prev, false);
 }
