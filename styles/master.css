@@ -80,28 +80,25 @@ img{
 
 }
 
-.logo{
-    text-decoration: none;
-    font-weight: bold;
-    color: black;
-}
-
-#idOpenMenu, #idCloseMenu{
-    font-weight: bold;
+#idCloseMenu{
+    height: 42px;
+    width: 42px;
+    line-height: 42px;
+    text-align: center;
+    font-weight: bolder;
+    color: white;
+    background: #999;
+    border-radius: 50%;
     user-select: none;
-    padding: .8rem 1rem;
-    transition: .2s;
     cursor: pointer;
-    border-radius: 2rem;
-}
-
-#idOpenMenu:hover{
-    background: rgba(0, 0, 0, 0.1);
+    transition: .25s;
+    /* margin: 2rem 0; */
+    position: relative;
+    top: -8%;
 }
 
 #idCloseMenu:hover{
-    background: rgba(255, 0, 0, 0.3);
-    border-radius: 50%;
+    background: #991111;
 }
 
 /* MENU SOBREPOSTO*/
@@ -184,7 +181,7 @@ img{
 
 .name{
     font-weight: 900;
-    font-size: 6.5rem;
+    font-size: 5rem;
     line-height: 1;
     text-transform: uppercase;
     color: rgba(0, 0, 0, 0.8);

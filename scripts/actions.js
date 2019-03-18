@@ -5,6 +5,13 @@ var menu = document.querySelector(".menu");
 document.querySelector("#idOpenMenu").addEventListener('click', menuControl);
 document.querySelector("#idCloseMenu").addEventListener('click', menuControl); 
 
+document.onkeydown = function (e) {
+    e = e || window.event;
+    if (e.keyCode == 27) {
+        menuControl();
+    }
+};
+
 function menuControl(){
     if (menu.classList.contains('close')) {
         menu.classList.replace('close', 'open');
