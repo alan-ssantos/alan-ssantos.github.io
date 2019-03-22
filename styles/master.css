@@ -267,14 +267,16 @@ img{
     align-items: center;
     flex-flow: row wrap;
     position: relative;
+    top: 14px; 
     opacity: 0;
-    transition: .65s;
+    transition: .4s;
     z-index: -1;
 }
 
 .ativo{
     opacity: 1;
     z-index: 1;
+    top: 0px;
 }
 
 .card-thumb{
@@ -352,7 +354,16 @@ img{
 }
 
 @media (max-width: 640px){
-    .menu-list{ flex-flow: column wrap; }
+    .menu-list{
+        flex-flow: column wrap;
+        text-align: center;
+    }
 
     .menu-item{ margin: 10px 0px; }    
 } 
+
+@media print{
+    .menu{
+        display: none;
+    }
+}
