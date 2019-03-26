@@ -58,6 +58,7 @@ function setCard() {
 }
 
 var navbar = document.querySelector('.navbar');
+const navItem = document.querySelector('.nav-item').className
 var cards = document.querySelector('.profile');
 window.addEventListener('scroll', function () {    
     if (window.scrollY >= (cards.offsetTop - 24) && window.scrollY 
