@@ -57,3 +57,13 @@ function setCard() {
     document.querySelector(".prev").addEventListener("click", settings.prev, false);
 }
 
+var navbar = document.querySelector('.navbar');
+var cards = document.querySelector('.profile');
+window.addEventListener('scroll', function () {    
+    if (window.scrollY >= (cards.offsetTop - 24) && window.scrollY 
+        <= cards.offsetTop + (cards.clientHeight - 24)) {             
+        navbar.style.color = "white";
+    } else {
+        navbar.style.color = "black";
+    }
+});
