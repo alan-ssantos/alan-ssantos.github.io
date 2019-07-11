@@ -9,51 +9,61 @@
     <link rel="stylesheet" href="styles/master.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
     integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-    <title>Lorem Ipsum</title>
-    
+    <title>Lorem Ipsum</title>    
 </head>
 <body>
-    <div class="menu close">
-        <p id="idCloseMenu"><i class="fas fa-times"></i></p>
-        <div class="container menu-body">
-            <ul class="menu-list">
-                <li class="menu-item"><a href="#">Lorem</a></li>
-                <li class="menu-item"><a href="#">Ipsum</a></li>
-                <li class="menu-item"><a href="#">Dolor</a></li>
-            </ul>
-        </div>
-    </div>
-    
-    <div class="container-fluid nav ">
+    <div class="container-fluid nav bg-white">
         <div class="container navbar">
-            <p class="nav-item">AS</p>
-            <p id="idOpenMenu" class="nav-item"><i class="fas fa-bars"></i> MENU</p>
+            <div class="navbar-left">
+                <a class="logo" href="#main">AS</a>
+            </div>
+            <div class="navbar-right">
+                <ul class="menu">
+                    <li class="menu-item"><a href="#about">Sobre</a></li>
+                    <li class="menu-item"><a href="#portifolio">Portifólio</a></li>
+                    <li class="menu-item"><a href="#contact">Contato</a></li>
+                </ul>
+            </div>
         </div>
     </div>
     
-    <div class="container-fluid full">
+    <!-- INIT MAIN -->
+    <div class="container-fluid full bg-white" id="main">
         <div class="container main">
             <p class="name first-name">Lorem</p>
             <div class="box">
-                <img src="images/businessman.png" alt="" class="main-img">
+                <img src="images/welcome.png" alt="" class="main-img">
             </div>
             <p class="name last-name">Ipsum</p>
         </div>
     </div>
+    <!-- END MAIN -->
     
-    <div class="container-fluid bg-black profile">
+    <!-- INIT ABOUT -->
+    <div class="container-fluid bg-black about" id="about">
         <div class="container-fluid mid">
-            <div class="row">
-                <h2>Contato</h2>
-            </div>
             <div class="container bio">
                 <div class="col">
-                    <img src="images/about.png" alt="">
+                    <img src="images/aboutt.png" alt="">
                 </div>
                 <div class="col">
-                    <h2 class="title">Lorem Ipsum</h2>
+                    <h2 class="title-blue">Short Bio</h2>
                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore doloremque odio perferendis, odit praesentium nisi doloribus sed aliquam in commodi, exercitationem beatae excepturi adipisci unde rem veniam vitae rerum consequuntur?</p>
                     <br>
+                </div>
+            </div>
+        </div>
+        
+        <div class="container-fluid mid bg-blue">
+            <div class="container formations">
+                <div class="col">
+                    <h2 class="title-black">Lorem ipsum</h2>
+                    <dl>
+                        <dt>Lorem ipsum dolor, sit amet consectetur - 2019</dt>
+                        <dd>odit praesentium nisi doloribus sed aliquam in commodi</dd>
+                        <dt>Lorem ipsum dolor, sit amet consectetur - 2019</dt>
+                        <dd>odit praesentium nisi doloribus sed aliquam in commodi</dd>
+                    </dl>
                 </div>
             </div>
         </div>
@@ -61,24 +71,31 @@
         <div class="container-fluid mid">
             <div class="container skills">
                 <div class="col">
-                    <h2 class="title">Lorem ipsum</h2>
-                    <ul>
-                        <li class="item">HTML5 / CSS3</li>
-                        <li class="item">JavaScript (ES6)</li>
-                        <li class="item">Node.js</li>
-                        <li class="item">Java</li>
-                        <li class="item">Oracle DB</li>
-                        <li class="item">Photoshop e Illustrator</li>
-                    </ul>
+                    <h2 class="title-blue">Skills</h2>
+                    <dl>
+                        <dt><i class="fab fa-js-square"></i> JAVASCRIPT</dt>
+                        <dd>React, Vue, Node</dd>
+                        <dt><i class="fab fa-html5"></i> HTML</dt>
+                        <dt><i class="fab fa-css3-alt"></i> CSS</dt>
+                        <dd>Sass, Less</dd>
+                        <dt><i class="fab fa-java"></i> JAVA</dt>
+                        <dd>Spring, JPA, JPQL</dd>
+                        <dt><i class="fas fa-server"></i> BANCO DE DADOS</dt>
+                        <dd>Oracle, Sql, MySql</dd>
+                        <dt><i class="fab fa-adobe"></i> ADOBE</dt>
+                        <dd>Photoshop and Illustrator</dd>
+                    </dl>
                 </div>
                 <div class="col">
-                    <img src="images/skills.png" alt="">
+                    <img src="images/skillss.png" alt="">
                 </div>
             </div>
         </div> 
     </div>
+    <!-- END ABOUT -->
     
-    <div class="container-fluid mid">
+    <!-- INIT PORTIFOLIO -->
+    <div class="container-fluid full" id="portifolio">
         <div class="container cards">
             <div class="controls">
                 <span class="trs prev"><i class="fas fa-angle-left"></i></span>
@@ -91,7 +108,7 @@
                         <img src="./images/porti/invest.gif" alt="" class="">
                     </div>
                     <div class="col card-main">
-                        <h2 class="card-title">Lorem Ipsum</h2>
+                        <h2 class="card-title">invest.Ai</h2>
                         <p class="card-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse fugit, tempore atque velit eligendi, ea in vel et voluptatibus ratione harum aspernatur aliquam voluptatem consequatur. Sequi laborum eligendi expedita deleniti.</p>
                         <div class="card-btn">
                             <a href="#">Visitar</a>
@@ -103,10 +120,10 @@
             <div class="card">
                 <div class="card-body">
                     <div class="col card-thumb">
-                        <img src="./images/porti/mussum.png" alt="" class="">
+                        <img src="./images/porti/expCards.gif" alt="" class="">
                     </div>
                     <div class="col card-main">
-                        <h2 class="card-title">Mussum Ipsum</h2>
+                        <h2 class="card-title">expCards</h2>
                         <p class="card-desc">Mussum Ipsum, cacilds vidis litro abertis. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
                         <div class="card-btn">
                             <a href="#">Visitar</a>
@@ -118,13 +135,13 @@
             <div class="card">
                 <div class="card-body">
                     <div class="col card-thumb">
-                        <img src="./images/porti/mussum.png" alt="" class="">
+                        <img src="./images/porti/caputi.png" alt="" class="">
                     </div>
                     <div class="col card-main">
-                        <h2 class="card-title">Dilma Ipsum</h2>
+                        <h2 class="card-title">Caputi Psicologia</h2>
                         <p class="card-desc">Se hoje é o dia das crianças... Ontem eu disse: o dia da criança é o dia da mãe, dos pais, das professoras, mas também é
-                        o dia dos animais, sempre que você olha uma criança, há sempre uma figura oculta, que é um cachorro atrás. O que é algo
-                        muito importante!</p>
+                            o dia dos animais, sempre que você olha uma criança, há sempre uma figura oculta, que é um cachorro atrás. O que é algo
+                            muito importante!</p>
                             <div class="card-btn">
                                 <a href="#">Visitar</a>
                             </div>
@@ -132,20 +149,23 @@
                     </div>
                 </div>
                 
+            </div>
         </div>
-    </div>
+        <!-- END PORTIFOLIO -->
         
-    <div class="container-fluid mid bg-deg">
-        <div class="container contact">
-            <a href="http://www.linkedin.com/in/lorem-ipsum"><i class="fab fa-linkedin"></i> linkedin.com/in/lorem-ipsum</a>
-            <a href="mailto:email@email.com"><i class="fas fa-envelope-square"></i> email@email.com</a>
+        <!-- INIT CONTACT -->
+        <div class="container-fluid mid bg-deg" id="contact">
+            <div class="container contact">
+                <a href="http://www.linkedin.com/in/lorem-ipsum"><i class="fab fa-linkedin"></i> linkedin.com/in/lorem-ipsum</a>
+                <a href="mailto:email@email.com"><i class="fas fa-envelope-square"></i> email@email.com</a>
+            </div>
         </div>
-    </div>
+        <!-- END CONTACT -->
         
-    <!-- <div class="footer">
-        <p>Lorem ipsum dolum at 2019</p>
-    </div> -->
-    
-    <script src="scripts/actions.js"></script>
-</body>
-</html>
+        <!-- <div class="footer">
+            <p>Lorem ipsum dolum at 2019</p>
+        </div> -->
+        
+        <script src="scripts/actions.js"></script>
+    </body>
+    </html>

@@ -4,15 +4,9 @@
 - GENERALIZAR OS BTN
 */
 
-*{
-    box-sizing: border-box;
-}
+*{ box-sizing: border-box; }
 
-body{
-    font-family: 'Lato', sans-serif;
-    overflow-x: hidden;
-    -webkit-font-smothing: antialising;
-}
+body{ font-family: 'Lato', sans-serif; }
 
 h2{
     margin: 10px 0;
@@ -20,7 +14,6 @@ h2{
     text-transform: uppercase;
     font-weight: 900;
     line-height: 1.4;
-    /* color: #111; */
 }
 
 p, a{
@@ -37,15 +30,15 @@ img{
 .container-fluid{
     width: 100%;
     display: flex;
-    justify-content: center;
     flex-flow: row wrap;
+    justify-content: center;
 }
 
 .container{
     display: flex;
     width: 100%;
     max-width: 960px;
-    padding: 0 1em;
+    padding: 0 16px;
 }
 
 .col{
@@ -55,16 +48,20 @@ img{
     margin: 0 1rem;
 }
 
+.col img{
+    max-width: 300px;
+}
+
 .full{
-    height: calc(100vh - 48px);
+    height: 100vh;
     min-height: 640px;
-    margin-top: 48px;
 }
 
 .mid{
     height: 30vh;
     min-height: 420px;
-    margin: 48px 0;
+    padding: 25px 0;
+    /* margin: 48px 0; */
 }
 
 /*BARRA DE NAVEGAÇÃO*/
@@ -82,82 +79,33 @@ img{
     color: #111;
 }
 
-.nav-item{
-    font-weight: bolder;
-    letter-spacing: 1px;
-    user-select: none;
-    height: 36px;
-    line-height: 36px;
-    padding: 0 1rem;
-    border-radius: 36px;
-    transition: .25s;
-}
-
-.nav-item:hover{
-    cursor: pointer;
+/* LOGO */
+.logo{
     color: #0093E9;
-    background: rgba(255, 255, 255, .85);
-}
-
-#idCloseMenu{
-    height: 42px;
-    width: 42px;
-    line-height: 42px;
-    text-align: center;
+    font-size: 16px;
     font-weight: bolder;
-    color: white;
-    background: #999;
-    border-radius: 50%;
-    user-select: none;
-    cursor: pointer;
+    text-transform: uppercase;
+    padding: 12px;
     transition: .25s;
-    /* margin: 2rem 0; */
-    position: relative;
-    top: -8%; left: 0;
-    bottom: 0; right: 0;
 }
 
-#idCloseMenu:hover{
-    background: #991111;
-    box-shadow: 0px 5px 30px rgba(175, 25, 25, 0.5);
+.logo:hover{
+    text-shadow: 0 2px 10px rgba(0, 147, 233, 0.5);
 }
 
-/* MENU SOBREPOSTO*/
+/* MENU*/
 .menu{
-    position: fixed;
-    top: 0; left: 0;
-    z-index: 20;
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    background: white;
-    transition: 0.5s;
-}
-
-.menu-body{
-    justify-content: center;
-}
-
-.menu-list{
     display: flex;
     flex-flow: row wrap;
 }
 
-.menu-item{
-    font-size: 32px;
-    font-weight: 900;
-    padding: 0 10px;
-}
-
 .menu-item a{
-    font-size: 40px;
-    line-height: calc(40px * 1.4);
-    color: black;
+    color: #111;
+    font-size: 16px;
+    font-weight: bold;
     text-transform: uppercase;
     text-decoration: none;
+    padding: 12px;
     transition: .3s;
 }
 
@@ -166,16 +114,13 @@ img{
     text-shadow: 0 2px 10px rgba(0, 147, 233, 0.5);
 }
 
-.close{ top: -100%; }
-
-.open{ top: 0; }
-
 /*SESSAO 1 - MAIN */
 .main{
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
     align-items: center;
+    padding-top: 48px;
 }
 
 .box{
@@ -186,10 +131,10 @@ img{
     max-width: 960px;
     height: 30vh;
     min-height: 200px;
-    background-color: #80D0C7;
-    background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
-    border-radius: .5rem;
-    box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.3);
+    /* background-color: #80D0C7; */
+    /* background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%); */
+    /* border-radius: 1rem; */
+    /* box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.3); */
 }
 
 .main-img{
@@ -206,42 +151,73 @@ img{
     line-height: 1;
     text-transform: uppercase;
     color: rgba(0, 0, 0, 0.8);
+    z-index: -10;
+    transition: 1.5s;
 }
 
 .first-name{
     align-self: flex-start;
+    transform: translate(0, 100px);
+    opacity: 0;
 }
+
 .last-name{
     align-self: flex-end;
+    transform: translate(0, -100px);
+    opacity: 0;
 }
 
 /* SESSAO 2 - SOBRE, FORMAÇÕES E HABILIDADES */
-.bio, .skills{
-    flex-flow: row wrap;
-    color: #ddd;
-    /* align-content: center; */
-}
-
-.bio{
-    font-size: 18px;
-}
-
-.title{
+.title-blue{
     background-color: #80D0C7;
     background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
-.skills ul{
-    padding-left: 1.5rem;
-    list-style: initial;
+.title-black{
+    background-color: #111;
+    background-image: linear-gradient(160deg, #111 0%, #666 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
-.skills ul li{
+.bio, .skills{
+    flex-flow: row wrap;
+    color: #ddd;
+    /* align-content: center; */
+}
+
+.formations{
+    /* padding: 16px 0; */
+    color: #ddd;
+    text-align: center;
+}
+
+.formations dd{
+    color: #111;
     font-size: 18px;
+    font-weight: normal;
+}
+
+dt{
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
     line-height: 1.4;
 }
+
+dt i{
+    color: #999;
+    margin-right: 4px;
+}
+
+dd{
+    font-weight: lighter;
+    color: #999;
+    margin: 0 0 8px 16px;
+}
+
 
 /*SESSAO 3 - CARDS DOS PROJETOS(PORTIFOLIO)*/
 .cards{
@@ -298,6 +274,7 @@ img{
     opacity: 1;
     z-index: 1;
     top: 0px;
+    transform: translate(0,0);
 }
 
 .card-thumb{
@@ -355,36 +332,14 @@ img{
     background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
     background-attachment: fixed;
 }
-
 .bg-white{ background: #efefef; }
 .bg-black{ background: #111; }
+.bg-blue{ background: #0093E9; }
+.back-x{
+    background: url('../images/back.png') ;
+}
 
 .center{
     text-align: center;
 }
-
 /*AJUSTES DE LAYOUT PARA MOBILE*/ 
-@media (max-width: 767px){
-    .col{ text-align: center; }
-    
-    .col ul{ list-style: none; }
-    
-    .mid{ height: 100%; }
-    
-    .skills{ flex-flow: row wrap-reverse; }
-}
-
-@media (max-width: 640px){
-    .menu-list{
-        flex-flow: column wrap;
-        text-align: center;
-    }
-
-    .menu-item{ margin: 10px 0px; }    
-} 
-
-@media print{
-    .menu{
-        display: none;
-    }
-}
