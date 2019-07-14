@@ -7,11 +7,10 @@
 body{ font-family: 'Lato', sans-serif; }
 
 h2{
-    margin: 10px 0;
     font-size: 36px;
-    text-transform: uppercase;
     font-weight: 900;
-    line-height: 1.4;
+    line-height: 1.6;
+    text-transform: uppercase;
 }
 
 p, a{
@@ -37,7 +36,7 @@ img {
     flex-flow: row wrap;
     flex-basis: 1;
     width: 100%;
-    max-width: 960px;
+    max-width: 1180px;
     padding: 0 16px;
 }
 
@@ -192,8 +191,62 @@ img {
     margin: 0 0 16px 16px;
 }
 
-/*SESSAO 3 - CARDS DOS PROJETOS(PORTIFOLIO)*/
+/*SESSAO 3 - PORTIFOLIO*/
+.slide{
+    display: flex;
+    height: 100%;
+}
+.slide-item{
+    display: flex;
+    justify-content: start;
+}
 
+.slide-item div{
+    flex: 1 1 0;
+}
+
+.thumb img{
+    height: 100%;
+    object-fit: cover;    
+}
+
+.desc{
+    font-size: 22px;
+    align-self: center;
+    padding-left: 16px;
+}
+
+.desc p{
+    font-weight: lighter;
+    margin: 16px 0;
+}
+
+.desc a{
+    display: inline-block;
+    padding: 10px 26px;
+    margin-top: 8px;
+    color: #fff;
+    font-size: 18px;
+    letter-spacing: 1px;
+    background: black;
+}
+
+.slide-list{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 16px 0;
+}
+
+.slide-list li{
+    width: 8px;
+    height: 8px;
+    background: #00000044;
+    border-radius: 16px;
+    margin: 0 8px;
+    transition: .2s;
+    cursor: pointer;
+}
 
 /* CONTATO */
 .contact{
@@ -215,11 +268,6 @@ img {
 }
 
 /* BACKGROUNDS */
-.bg-deg{
-    background-color: #80D0C7;
-    background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
-    background-attachment: fixed;
-}
 .bg-white{ background: #fff; }
 .bg-black{ background: #111; }
 .bg-blue{ background: #0093E9; }
@@ -235,7 +283,7 @@ img {
 @media only screen and (max-width: 600px) {
 }
 @media only screen and (max-width: 768px) {
-    .container{
+    .container, .slide-item{
         flex-flow: column;
         text-align: center;
     }
