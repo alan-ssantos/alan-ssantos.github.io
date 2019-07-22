@@ -14,9 +14,10 @@ h2{
 }
 
 p, a{
-    line-height: 1.4;
+    line-height: 1.2;
     text-decoration: none;
 }
+a{ display: inline-block; }
 
 img {
     max-width: 100%;
@@ -54,10 +55,10 @@ img {
 .mid{
     height: 50vh;
     min-height: 420px;
-    padding: 24px 0;
+    padding: 32px 0;
 }
 
-.auto{ padding: 24px 0; }
+.auto{ padding: 32px 0; }
 
 /*BARRA DE NAVEGAÇÃO*/
 .nav{
@@ -167,10 +168,28 @@ img {
 
 .title-black{ color: #111; }
 
-.about{ color: #fff; }
+.about{
+    font-size: 18px;                                                                
+    color: #fff; }
 .about img{
-    
     max-width: 320px;
+}
+
+.formations{ text-align: center; }
+.formations dt{
+    font-size: 26px;
+    font-weight: 900;
+    text-transform: uppercase;
+    line-height: 1.4;
+    letter-spacing: 1px;
+}
+.formations dd{
+    font-size: 18px;
+    font-weight: lighter;
+    margin-bottom: 26px;
+}
+.formations dd:last-child{
+    margin-bottom: 0;
 }
 
 .skills dt{
@@ -207,34 +226,39 @@ img {
 
 .thumb img{
     height: 100%;
-    object-fit: cover;    
+    object-fit: contain;    
 }
 
 .desc{
-    font-size: 22px;
     align-self: center;
     padding-left: 16px;
 }
 
 .desc p{
-    font-weight: lighter;
-    margin: 16px 0;
+    margin: 8px 0;
+    font-size: 18px;
+    line-height: 1.4;
 }
 
 .desc a{
     display: inline-block;
-    padding: 10px 26px;
     margin-top: 8px;
+    padding: 10px 26px;
     color: #fff;
+    background: #111;
     font-size: 18px;
+    transition: .5s;
     letter-spacing: 1px;
-    background: black;
+}
+
+.desc a:hover{
+    background: #0093E9;
+    transition: .25s;    
 }
 
 .slide-list{
     display: flex;
     justify-content: center;
-    width: 100%;
     padding: 16px 0;
 }
 
@@ -250,21 +274,38 @@ img {
 
 /* CONTATO */
 .contact{
-    flex-flow: column wrap;
+    flex-flow: row wrap;
     justify-content: center;
     align-content: center;
 }
 
-.contact a{
-    font-size: 32px;
-    text-decoration: none;
-    color: #111;
+.contact .col{
+    justify-content: center;
+}
+
+.contact a{ 
     margin: 10px 0;
+    color: #fff;
+    font-size: 18px;
+    text-decoration: none;
     transition: .25s;
+    letter-spacing: 1px;
 }
 
 .contact a:hover{
     color: #efefef;
+}
+
+.contact .image{
+    text-align: center;
+    max-width: 128px;
+}
+
+.contact li {
+    text-align: right;
+    text-transform: lowercase;
+    letter-spacing: 1px;    
+    margin: 4px 0;
 }
 
 /* BACKGROUNDS */
