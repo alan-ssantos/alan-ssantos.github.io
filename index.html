@@ -4,37 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!-- <link rel="stylesheet" href="styles/normalize.css"> -->
     <link rel="stylesheet" href="styles/reset.css">
-    <link rel="stylesheet" href="styles/master.css">
+    <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
     integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <title>Lorem Ipsum</title>    
 </head>
 <body>
     <div class="container-fluid nav bg-white">
-        <div class="container navbar">
-            <div class="navbar-left">
+        <nav class="container navbar" data-menu="smooth">
+            <div class="">
                 <a class="logo" href="#main">AS</a>
             </div>
-            <div class="navbar-right">
-                <ul class="menu">
+
+            <div class="menu">
+                <button class="mobile-button" data-menu="mobile" aria-expanded="false" aria-controls="menu-list">menu</button>
+                <ul class='menu-list' data-menu="list" id="menu-list">
                     <li class="menu-item"><a href="#about">Sobre</a></li>
                     <li class="menu-item"><a href="#portifolio">Portifólio</a></li>
                     <li class="menu-item"><a href="#contact">Contato</a></li>
                 </ul>
             </div>
-        </div>
+        </nav>
     </div>
     
     <!-- INIT MAIN -->
     <div class="container-fluid full bg-white" id="main">
-
-            <ul class="back-balls">
-                <li></li>
-                <li></li>
-                <li></li>
-            </ul>
         <div class="container main">
             <p class="name first-name">LOREM</p>
             <div class="box">
@@ -137,10 +132,10 @@
                 <br>
                 <a href="mailto:email@email.com"><i class="fas fa-envelope-square"></i> email@email.com</a>
             </div>
-            <div class="col image">
+            <div class="col image" data-menu="smooth">
                 <a class="logo" href="#main">AS</a>
             </div>
-            <div class="col right" id="menu-footer">
+            <div class="col right" id="menu-footer" data-menu="smooth">
                 <ul class="">
                     <li class=""><a href="#about">Sobre</a></li>
                     <li class=""><a href="#portifolio">Portifólio</a></li>
@@ -155,6 +150,6 @@
         <p>Lorem ipsum dolum at 2019</p>
     </div> -->
     
-    <script src="scripts/actions.js"></script>
+    <script type="module" src="scripts/actions.js"></script>
 </body>
 </html>

@@ -1,6 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700,900');
 
-/*  */
 
 *{ box-sizing: border-box; }
 
@@ -96,9 +94,9 @@ img {
 }
 
 /* MENU*/
-.menu{
+.menu-list{
     display: flex;
-    flex-flow: row wrap;
+    flex-wrap:wrap;
 }
 
 .menu-item a{
@@ -158,9 +156,6 @@ img {
     animation: 1s ola;
 }
 
-.ativo{
-}
-
 .first-name{
     align-self: flex-start;
     transform: translate(0, 100px);
@@ -180,7 +175,7 @@ img {
     font-size: 18px;                                                                
     color: #fff; }
 .about img{
-    max-width: 320px;
+    max-width: 280px;
 }
 
 .formations{ text-align: center; }
@@ -365,56 +360,4 @@ img {
 only screen and (min--moz-device-pixel-ratio: 1.5),
 only screen and (min-device-pixel-ratio: 1.5)
 {
-}
-
-@keyframes ola {
-  0% {
-    letter-spacing: 1em;
-    opacity: 0;
-  }
-  40% {
-    opacity: 0.6;
-  }
-  100% {
-    letter-spacing: normal;
-    opacity: 1;
-  }
-}
-
-.back-balls{
-    position: absolute;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-}
-
-.back-balls li{
-    width: 75px;
-    height: 75px;
-    background: #0093E9;
-    border-radius: 150px;
-    animation: 
-        6s
-        linear
-        ball
-        infinite;
-}
-
-.back-balls li:first-child{
-    align-self: flex-start;
-}
-.back-balls li:last-child{
-    align-self: flex-end;
-}
-
-@keyframes ball {
-    0% { 
-        transform: rotate(0deg) translateX(150px) ;
-    }
-    100%   {
-        transform: rotate(360deg) translateX(150px) ;
-    }
 }
