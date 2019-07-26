@@ -1,5 +1,3 @@
-
-
 *{ box-sizing: border-box; }
 
 body{ font-family: 'Lato', sans-serif; }
@@ -100,12 +98,14 @@ img {
 }
 
 .menu-item a{
+    height: 48px;
     color: #111;
     font-size: 16px;
     font-weight: 900;
     text-transform: uppercase;
     text-decoration: none;
-    padding: 13px 16px;
+    line-height: 48px;
+    padding: 0em 1em;
     border-bottom: 3px solid rgba(0, 0, 0, 0);
     transition: .2s;
 }
@@ -113,6 +113,7 @@ img {
 .menu-item a:hover{
     color: #0093E9;
     border-bottom: 2px solid #0093E9;
+    background: #ededed;
 }
 
 /*SESSAO 1 - MAIN */
@@ -130,7 +131,6 @@ img {
     align-items: flex-end;
     width: 100%;
     max-width: 960px;
-    height: 30vh;
     min-height: 200px;
     /* background-color: #80D0C7; */
     /* background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%); */
@@ -158,12 +158,10 @@ img {
 
 .first-name{
     align-self: flex-start;
-    transform: translate(0, 100px);
 }
 
 .last-name{
     align-self: flex-end;
-    transform: translate(0, -100px);
 }
 
 /* SESSAO 2 - SOBRE, FORMAÇÕES E HABILIDADES */
@@ -174,190 +172,192 @@ img {
 .about{
     font-size: 18px;                                                                
     color: #fff; }
-.about img{
-    max-width: 280px;
-}
-
-.formations{ text-align: center; }
-.formations dt{
-    font-size: 22px;
-    font-weight: 900;
-    text-transform: uppercase;
-    line-height: 1.4;
-    letter-spacing: 1px;
-}
-.formations dd{
-    font-size: 18px;
-    font-weight: lighter;
-    margin-bottom: 26px;
-}
-.formations dd:last-child{
-    margin-bottom: 0;
-}
-
-.skills dt{
-    font-size: 18px;
-    font-weight: bold;
-    text-transform: uppercase;
-    line-height: 1.4;
-}
-
-.skills dt i{
-    color: #ccc;
-    margin-right: 4px;
-}
-
-.skills dd{
-    color: #999;
-    font-weight: lighter;
-    margin: 0 0 16px 16px;
-}
-
-/*SESSAO 3 - PORTIFOLIO*/
-.slide{
-    display: flex;
-    height: 100%;
-}
-.slide-item{
-    display: flex;
-    justify-content: start;
-}
-
-.slide-item div{
-    flex: 1 1 0;
-}
-
-.thumb img{
-    height: 100%;
-    object-fit: contain;    
-}
-
-.desc{
-    align-self: center;
-    padding-left: 16px;
-}
-
-.desc p{
-    margin: 8px 0;
-    font-size: 18px;
-    line-height: 1.4;
-}
-
-.desc a{
-    display: inline-block;
-    margin-top: 8px;
-    padding: 10px 26px;
-    color: #fff;
-    background: #111;
-    font-size: 18px;
-    transition: .5s;
-    letter-spacing: 1px;
-}
-
-.desc a:hover{
-    background: #0093E9;
-    transition: .25s;    
-}
-
-.slide-list{
-    display: flex;
-    justify-content: center;
-    padding: 16px 0;
-}
-
-.slide-list li{
-    width: 8px;
-    height: 8px;
-    background: #00000044;
-    border-radius: 16px;
-    margin: 0 8px;
-    transition: .2s;
-    cursor: pointer;
-}
-
-/* CONTATO */
-.contact{
-    flex-flow: row wrap;
-    justify-content: center;
-    align-content: center;
-}
-
-.contact .col{
-    justify-content: center;
-}
-
-.contact a{ 
-    margin: 10px 0;
-    color: #fff;
-    font-size: 18px;
-    text-decoration: none;
-    transition: .25s;
-    letter-spacing: 1px;
-}
-
-.contact a:hover{
-    color: #efefef;
-}
-
-.contact .image{
-    text-align: center;
-    max-width: 128px;
-}
-
-.contact li {
-    text-align: right;
-    text-transform: lowercase;
-    letter-spacing: 1px;    
-    margin: 4px 0;
-}
-
-/* BACKGROUNDS */
-.bg-white{ background: #fff; }
-.bg-black{ background: #111; }
-.bg-blue{ background: #0093E9; }
-.back-x{
-    background: url('../images/back.png') ;
-}
-
-/*AJUSTES DE LAYOUT PARA MOBILE*/ 
-
-@media print {}
-@media only screen and (max-width: 480px) {
-}
-@media only screen and (max-width: 600px) {
-}
-@media only screen and (max-width: 768px) {
-    .container, .slide-item{
-        flex-flow: column;
-        text-align: center;
+    .about img{
+        max-width: 280px;
     }
-    .navbar{
-        flex-flow: row wrap;
+    
+    .formations{ text-align: center; }
+    .formations dt{
+        font-size: 22px;
+        font-weight: 900;
+        text-transform: uppercase;
+        line-height: 1.4;
+        letter-spacing: 1px;
     }
-    .mid{
+    .formations dd{
+        font-size: 18px;
+        font-weight: lighter;
+        margin-bottom: 26px;
+    }
+    .formations dd:last-child{
+        margin-bottom: 0;
+    }
+    
+    .skills dt{
+        font-size: 18px;
+        font-weight: bold;
+        text-transform: uppercase;
+        line-height: 1.4;
+    }
+    
+    .skills dt i{
+        color: #ccc;
+        margin-right: 4px;
+    }
+    
+    .skills dd{
+        color: #999;
+        font-weight: lighter;
+        margin: 0 0 16px 16px;
+    }
+    
+    /*SESSAO 3 - PORTIFOLIO*/
+    .slide{
+        display: flex;
         height: 100%;
     }
-    .skills {
-        flex-direction: column-reverse;
+    .slide-item{
+        display: flex;
+        justify-content: start;
     }
-    .left, .right{
-        text-align: center;
+    
+    .slide-item div{
+        flex: 1 1 0;
     }
-    .col img{
-        margin: 32px 0;
+    
+    .thumb img{
+        height: 100%;
+        object-fit: contain;    
     }
-    #menu-footer{
-        display: none;
-    }
+    
     .desc{
-        padding: 0;
+        align-self: center;
+        padding-left: 16px;
     }
-}
-@media only screen and (max-width: 992px) {
-}
-@media only screen and (max-width: 1382px) {}
-@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
-only screen and (min--moz-device-pixel-ratio: 1.5),
-only screen and (min-device-pixel-ratio: 1.5)
-{
-}
+    
+    .desc p{
+        margin: 8px 0;
+        font-size: 18px;
+        line-height: 1.4;
+    }
+    
+    .desc a{
+        display: inline-block;
+        margin-top: 8px;
+        padding: 10px 26px;
+        color: #fff;
+        background: #111;
+        font-size: 18px;
+        transition: .5s;
+        letter-spacing: 1px;
+    }
+    
+    .desc a:hover{
+        background: #0093E9;
+        transition: .25s;    
+    }
+    
+    .slide-list{
+        display: flex;
+        justify-content: center;
+        padding: 16px 0;
+    }
+    
+    .slide-list li{
+        width: 8px;
+        height: 8px;
+        background: #00000044;
+        border-radius: 16px;
+        margin: 0 8px;
+        transition: .2s;
+        cursor: pointer;
+    }
+    
+    /* CONTATO */
+    .contact{
+        flex-flow: row wrap;
+        justify-content: center;
+        align-content: center;
+    }
+    
+    .contact .col{
+        justify-content: center;
+    }
+    
+    .contact a{ 
+        margin: 10px 0;
+        color: #fff;
+        font-size: 18px;
+        text-decoration: none;
+        transition: .25s;
+        letter-spacing: 1px;
+    }
+    
+    .contact a:hover{
+        color: #efefef;
+    }
+    
+    .contact .image{
+        text-align: center;
+        max-width: 128px;
+    }
+    
+    .contact li {
+        text-align: right;
+        text-transform: lowercase;
+        letter-spacing: 1px;    
+        margin: 4px 0;
+    }
+    
+    /* BACKGROUNDS */
+    .bg-white{ background: #fff; }
+    .bg-black{ background: #111; }
+    .bg-blue{ background: #0093E9; }
+    .back-x{
+        background: url('../images/back.png') ;
+    }
+    
+    /*AJUSTES DE LAYOUT PARA MOBILE*/ 
+    
+    @media print {}
+    @media only screen and (max-width: 480px) {
+    }
+    @media only screen and (max-width: 600px) {
+    }
+    @media only screen and (max-width: 768px) {
+        .container, .slide-item{
+            flex-flow: column;
+            text-align: center;
+        }
+        .navbar{
+            flex-flow: row wrap;
+        }
+        .mid{
+            height: 100%;
+        }
+        .skills {
+            flex-direction: column-reverse;
+        }
+        .left, .right{
+            text-align: center;
+        }
+        .col img{
+            margin: 32px 0;
+        }
+        #menu-footer{
+            display: none;
+        }
+        .desc{
+            padding: 0;
+        }
+    }
+    @media only screen and (max-width: 992px) {
+    }
+    @media only screen and (max-width: 1382px) {
+        
+    }
+    @media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+    only screen and (min--moz-device-pixel-ratio: 1.5),
+    only screen and (min-device-pixel-ratio: 1.5)
+    {
+    }

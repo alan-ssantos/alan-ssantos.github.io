@@ -4,20 +4,59 @@
 
 @media (max-width: 768px){
     .mobile-button{
-        display: block;
+        display: flex;
+        align-items: center;
+        height: 48px;
+        padding: 0 1em;
+        font-family: 'Lato', sans-serif;
+        font-size: 16px;
+        line-height: 48px;
+        font-weight: 900;
+        text-transform: uppercase;
+        border: none;
+        background: transparent;
     }
+    
+    .mobile-button::before{
+        content: '';
+        height: 2px;
+        width: 16px;
+        background: #111;
+        margin-right: 8px;
+        box-shadow: 0 5px #000, 0 -5px #000;
+    }
+
+    .mobile-button:hover::before, .mobile-button:focus::before{
+        background: #0093E9;
+        box-shadow: 0 5px #0093E9,0 -5px #0093E9;
+    }
+    
+    .mobile-button:hover, .mobile-button:focus{
+        outline: none;
+        color: #0093E9;
+        border-bottom: 2px solid #0093E9;
+        background: #ededed;
+        cursor: pointer;
+    }
+    
     .menu-list{
         display: none;
     }
+    
     .menu-list.active{
+        display: flex;
         position: absolute;
         top: 0; right: 0;
-        display: flex;
+        z-index: -1;
+        width: 100%;
+        margin-top: 48px;
         flex-flow: column wrap;
         text-align: right;
-        z-index: -1;
-        margin-top: 48px;
         background: #fff;
-        
     }
+    
+    .menu-list.active a{
+        width: 100%;
+    }
+    
 }
