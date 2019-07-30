@@ -48,13 +48,17 @@
         position: absolute;
         top: 0; right: 0;
         z-index: 100;
-        width: 60vw;
+        /* width: 50vw; */
+        min-width: 200px;
         height: 100vh;
         margin-top: 48px;
         flex-flow: column wrap;
         text-align: right;
         background: #fff;
+        -webkit-animation: menulist .6s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+        animation: menulist .6s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
     }
+    
     .menu.active::before{
         content: "";
         position: absolute;
@@ -72,4 +76,36 @@
         border: none;
     }
     
+}
+
+
+@-webkit-keyframes menulist{
+    0% {
+        opacity: 0;
+        width: 0;        
+    }
+    40%{
+        opacity: 1;
+        width: 52vw;
+    }
+    100%{
+        width: 50vw;
+    }
+}
+
+ @keyframes menulist{
+    0% {
+        opacity: 0;
+        letter-spacing: -10px;
+        width: 0;        
+    }
+    40%{
+        opacity: 1;
+        letter-spacing: 2px;
+        width: 52vw;
+    }
+    100%{
+        letter-spacing: 1px;
+        width: 50vw;
+    }
 }
