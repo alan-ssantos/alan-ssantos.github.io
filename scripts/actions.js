@@ -4,9 +4,7 @@ import MobileMenu from './modules/mobile-menu.js';
 const smoothScroll = new SmoothScroll('[data-menu="smooth"] a[href^="#"]');
 smoothScroll.init();
 
-console.log(document.querySelector('.menu-list'));
-
-const mobileMenu = new MobileMenu('.mobile-button', '.menu-list');
+const mobileMenu = new MobileMenu('.menu', '.mobile-button', '.menu-list');
 mobileMenu.init();
 
 // function outsideClick(){

@@ -10,7 +10,7 @@ h2{
 }
 
 p, a{
-    line-height: 1.2;
+    line-height: 1.4;
     text-decoration: none;
 }
 a{ display: inline-block; }
@@ -153,7 +153,7 @@ img {
     text-transform: uppercase;
     color: #111;
     transition: 1.5s;
-    animation: 1s ola;
+    /* animation: 1s ola; */
 }
 
 .first-name{
@@ -163,11 +163,6 @@ img {
 .last-name{
     align-self: flex-end;
 }
-
-/* SESSAO 2 - SOBRE, FORMAÇÕES E HABILIDADES */
-.title-blue{ color: #0093E9; }
-
-.title-black{ color: #111; }
 
 .about{
     font-size: 18px;                                                                
