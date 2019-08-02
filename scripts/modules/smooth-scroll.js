@@ -7,6 +7,7 @@ export default class SmoothScroll{
             this.options = options;
         }
         this.scrollToSection = this.scrollToSection.bind(this);
+
     }
     
     scrollToSection(event) {

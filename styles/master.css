@@ -1,8 +1,11 @@
 *{ box-sizing: border-box; }
 
-body{ font-family: 'Lato', sans-serif; }
+body{
+    font-family: 'Poppins', sans-serif;
+}   
 
 h2{
+    font-family: 'Lato', sans-serif;
     font-size: 36px;
     font-weight: 900;
     line-height: 1.6;
@@ -31,7 +34,6 @@ img {
 .container{
     display: flex;
     flex-flow: row wrap;
-    flex-basis: 1;
     width: 100%;
     max-width: 1180px;
     padding: 0 16px;
@@ -62,6 +64,7 @@ img {
 
 /*BARRA DE NAVEGAÇÃO*/
 .nav{
+    font-family: 'Lato', sans-serif;
     position: fixed;
     top: 0; left: 0;
     z-index: 10;
@@ -164,195 +167,233 @@ img {
     align-self: flex-end;
 }
 
-.about{
+.skills, .bio{
     font-size: 18px;                                                                
-    color: #fff; }
-    .about img{
-        max-width: 280px;
+    color: #fff; 
+}
+.col img{
+    max-width: 280px;
+}
+
+.formations{ text-align: center; }
+.formations dt{
+    font-size: 22px;
+    font-weight: 900;
+    text-transform: uppercase;
+    line-height: 1.4;
+    letter-spacing: 1px;
+}
+.formations dd{
+    font-size: 18px;
+    font-weight: lighter;
+    margin-bottom: 26px;
+}
+.formations dd:last-child{
+    margin-bottom: 0;
+}
+
+.skills ul{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.skills li{
+    display: flex;
+    align-items: center;
+    padding: .5em;
+    margin: .5em;
+    background: #222;
+    color: #fff;
+    letter-spacing: 1px;
+    transition: .2s ease-in-out;
+}
+
+.skills li i{
+    font-size: 22px;
+    margin-right: .5em;
+}
+
+.skills li:hover{
+    font-weight: bold;
+    user-select: none;
+    cursor: pointer;
+    padding: 1em;
+    background: #0093E9;
+    color: #111;
+}
+
+/*SESSAO 3 - PORTIFOLIO*/
+.slide-wrapper{
+    position: relative;
+    padding: 0;
+}
+
+.slide{
+    display: flex;
+    height: 100%;
+}
+
+.slide-item{
+    display: flex;
+    justify-content: start;
+}
+
+.slide-item div{
+    flex: 1 1 0;
+}
+
+.thumb img{
+    height: 100%;
+    min-width: 100%;
+    object-fit: cover;
+    -webkit-clip-path: polygon(0 0, 100% 0, 90% 100%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0, 90% 100%, 0% 100%);    
+}
+
+.desc{
+    align-self: center;
+    padding-left: 16px;
+}
+
+.desc h2, .desc p{
+    padding-right: calc(((100vw - 1180px) / 2));
+}
+
+.desc p{
+    margin: 8px 0;
+    font-size: 18px;
+    line-height: 1.4;
+}
+
+.desc a{
+    display: inline-block;
+    margin-top: 8px;
+    padding: 10px 26px;
+    color: #fff;
+    background: #111;
+    font-size: 18px;
+    transition: .5s;
+    letter-spacing: 1px;
+}
+
+.desc a:hover{
+    background: #0093E9;
+    transition: .25s;    
+}
+
+.slide-list{
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    padding: 16px 0;
+}
+
+.slide-list li{
+    width: 8px;
+    height: 8px;
+    /* background: red; */
+    border: 1px solid black;
+    border-radius: 100%;
+    margin: 0 8px;
+    transition: .2s;
+    cursor: pointer;
+}
+
+.slide-list li:hover{
+    padding: 4px;
+}
+
+/* CONTATO */
+.contact{
+    flex-flow: row wrap;
+    justify-content: center;
+    align-content: center;
+}
+
+.contact .col{
+    justify-content: center;
+}
+
+.contact a{ 
+    margin: 10px 0;
+    color: #fff;
+    font-size: 18px;
+    text-decoration: none;
+    transition: .25s;
+    letter-spacing: 1px;
+}
+
+.contact a:hover{
+    color: #efefef;
+}
+
+.contact .image{
+    text-align: center;
+    max-width: 128px;
+}
+
+.contact li {
+    text-align: right;
+    text-transform: lowercase;
+    letter-spacing: 1px;    
+    margin: 4px 0;
+}
+
+/* BACKGROUNDS */
+.bg-white{ background: #fff; }
+.bg-black{ background: #111; }
+.bg-blue{ background: #0093E9; }
+.back-x{
+    background: url('../images/back.png') ;
+}
+
+/*AJUSTES DE LAYOUT PARA MOBILE*/ 
+
+@media print {
+    .nav{
+        display: none;
     }
-    
-    .formations{ text-align: center; }
-    .formations dt{
-        font-size: 22px;
-        font-weight: 900;
-        text-transform: uppercase;
-        line-height: 1.4;
-        letter-spacing: 1px;
-    }
-    .formations dd{
-        font-size: 18px;
-        font-weight: lighter;
-        margin-bottom: 26px;
-    }
-    .formations dd:last-child{
-        margin-bottom: 0;
-    }
-    
-    .skills dt{
-        font-size: 18px;
-        font-weight: bold;
-        text-transform: uppercase;
-        line-height: 1.4;
-    }
-    
-    .skills dt i{
-        color: #ccc;
-        margin-right: 4px;
-    }
-    
-    .skills dd{
-        color: #999;
-        font-weight: lighter;
-        margin: 0 0 16px 16px;
-    }
-    
-    /*SESSAO 3 - PORTIFOLIO*/
-    .slide{
-        display: flex;
-        height: 100%;
-    }
-    .slide-item{
-        display: flex;
-        justify-content: start;
-    }
-    
-    .slide-item div{
-        flex: 1 1 0;
-    }
-    
-    .thumb img{
-        height: 100%;
-        object-fit: contain;    
-    }
-    
-    .desc{
-        align-self: center;
-        padding-left: 16px;
-    }
-    
-    .desc p{
-        margin: 8px 0;
-        font-size: 18px;
-        line-height: 1.4;
-    }
-    
-    .desc a{
-        display: inline-block;
-        margin-top: 8px;
-        padding: 10px 26px;
-        color: #fff;
-        background: #111;
-        font-size: 18px;
-        transition: .5s;
-        letter-spacing: 1px;
-    }
-    
-    .desc a:hover{
-        background: #0093E9;
-        transition: .25s;    
-    }
-    
-    .slide-list{
-        display: flex;
+}
+@media only screen and (max-width: 480px) {
+}
+@media only screen and (max-width: 600px) {
+}
+@media only screen and (max-width: 768px) {
+    .container, .slide-item{
+        flex-flow: column;
         justify-content: center;
-        padding: 16px 0;
-    }
-    
-    .slide-list li{
-        width: 8px;
-        height: 8px;
-        background: #00000044;
-        border-radius: 16px;
-        margin: 0 8px;
-        transition: .2s;
-        cursor: pointer;
-    }
-    
-    /* CONTATO */
-    .contact{
-        flex-flow: row wrap;
-        justify-content: center;
-        align-content: center;
-    }
-    
-    .contact .col{
-        justify-content: center;
-    }
-    
-    .contact a{ 
-        margin: 10px 0;
-        color: #fff;
-        font-size: 18px;
-        text-decoration: none;
-        transition: .25s;
-        letter-spacing: 1px;
-    }
-    
-    .contact a:hover{
-        color: #efefef;
-    }
-    
-    .contact .image{
         text-align: center;
-        max-width: 128px;
     }
-    
-    .contact li {
-        text-align: right;
-        text-transform: lowercase;
-        letter-spacing: 1px;    
-        margin: 4px 0;
+    .navbar{
+        flex-flow: row wrap;
     }
-    
-    /* BACKGROUNDS */
-    .bg-white{ background: #fff; }
-    .bg-black{ background: #111; }
-    .bg-blue{ background: #0093E9; }
-    .back-x{
-        background: url('../images/back.png') ;
+    .mid{
+        height: 100%;
     }
-    
-    /*AJUSTES DE LAYOUT PARA MOBILE*/ 
-    
-    @media print {}
-    @media only screen and (max-width: 480px) {
+    .skills {
+        flex-direction: column-reverse;
     }
-    @media only screen and (max-width: 600px) {
+    .left, .right{
+        text-align: center;
     }
-    @media only screen and (max-width: 768px) {
-        .container, .slide-item{
-            flex-flow: column;
-            text-align: center;
-        }
-        .navbar{
-            flex-flow: row wrap;
-        }
-        .mid{
-            height: 100%;
-        }
-        .skills {
-            flex-direction: column-reverse;
-        }
-        .left, .right{
-            text-align: center;
-        }
-        .col img{
-            margin: 32px 0;
-        }
-        #menu-footer{
-            display: none;
-        }
-        .desc{
-            padding: 0;
-        }
+    .col img{
+        margin: 32px 0;
     }
-    @media only screen and (max-width: 992px) {
+    #menu-footer{
+        display: none;
     }
-    @media only screen and (max-width: 1382px) {
-        
+    .desc{
+        padding: 0;
     }
-    @media only screen and (-webkit-min-device-pixel-ratio: 1.5),
-    only screen and (min--moz-device-pixel-ratio: 1.5),
-    only screen and (min-device-pixel-ratio: 1.5)
-    {
-    }
+}
+@media only screen and (min-width: 992px) {
+}
+@media only screen and (max-width: 1382px) {
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+only screen and (min--moz-device-pixel-ratio: 1.5),
+only screen and (min-device-pixel-ratio: 1.5)
+{
+}

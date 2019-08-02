@@ -6,14 +6,3 @@ smoothScroll.init();
 
 const mobileMenu = new MobileMenu('.menu', '.mobile-button', '.menu-list');
 mobileMenu.init();
-
-// function outsideClick(){
-//     //Seleciona o documento HTML
-//     const html = document.documentElement; 
-//     //Adiciona o evento de Click
-//     html.addEventListener('click', handleOutsideClick);
-//     //Cria a função handleOutsideClick
-//     function handleOutsideClick(event){
-//         console.log(event);
-//     }
-// }
