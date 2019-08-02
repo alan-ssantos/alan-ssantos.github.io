@@ -25,7 +25,7 @@
         margin-right: 8px;
         box-shadow: 0 5px #000, 0 -5px #000;
     }
-
+    
     .mobile-button:hover::before, .mobile-button:focus::before{
         background: #0093E9;
         box-shadow: 0 5px #0093E9,0 -5px #0093E9;
@@ -41,9 +41,10 @@
     
     .menu-list{
         display: none;
-    }    
+    }   
+    
     .menu-list.active{
-        display: flex;
+        display: inline-block;
         position: absolute;
         top: 0; right: 0;
         z-index: -2;
@@ -52,32 +53,35 @@
         flex-flow: column wrap;
         text-align: right;
         background: #fff;
-        -webkit-animation: menulist .4s ease-in-out both;
-        animation: menulist .4s ease-in-out both;
     }
     
-    .menu-list.active a{
+    .menu-list.active .menu-item a{
         width: 100%;
+        transition: none;
+        -webkit-animation: menulist 0.4s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+        animation: menulist 0.4s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
     }
+    
     .menu-list.active a:hover{
         border: none;
     }
     
 }
 
- @keyframes menulist{
+@keyframes menulist {
     0% {
         opacity: 0;
-        letter-spacing: -10px;
-        width: 0;        
+        letter-spacing: -.5em;
+        width: 0vw;
     }
     40%{
         opacity: 1;
-        letter-spacing: 2px;
-        width: 52vw;
+        letter-spacing: .2em;
+        width: 55vw;
     }
     100%{
-        letter-spacing: 1px;
+        letter-spacing: normal;
         width: 50vw;
     }
+    
 }
