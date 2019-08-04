@@ -120,6 +120,7 @@ img {
 
 /*SESSAO 1 - MAIN */
 .main{
+    position: relative;
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
@@ -127,44 +128,29 @@ img {
     padding-top: 48px;
 }
 
-.box{
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    width: 100%;
-    max-width: 960px;
-    min-height: 200px;
-    /* background-color: #80D0C7; */
-    /* background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%); */
-    /* border-radius: 1rem; */
-    /* box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.3); */
-}
-
-.main-img{
-    width: 100%;
-    min-width: 300px;
-    max-width: 50vh;
-    vertical-align: bottom;
-    z-index: 2;
-}
-
-.name{
-    font-weight: 900;
+.main-name{
+    position: absolute;
+    z-index: 3;
     font-size: 5rem;
-    line-height: 1;
+    font-weight: 900;
     text-transform: uppercase;
-    color: #111;
-    transition: 1.5s;
-    /* animation: 1s ola; */
+    color: #fff;
+    text-shadow: 0 0 10px rgba(255,255,255,.5);
 }
 
-.first-name{
-    align-self: flex-start;
+.main img{
+    position: absolute;
+    height: 60%;
+    z-index: 2;
+    opacity: .8;
 }
 
-.last-name{
-    align-self: flex-end;
+[data-main="image"]{
+    /* top: 15%; */
+    z-index: 1 !important;
+    filter: grayscale(1);
 }
+
 
 .skills, .bio{
     font-size: 18px;                                                                

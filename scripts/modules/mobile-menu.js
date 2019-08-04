@@ -35,7 +35,6 @@ export default class MobileMenu{
         if(this.mobileButton && this.menuList){
             this.addMenuEvents();
         } else {
-            console.log('oui')
             return this;
         }
     }
