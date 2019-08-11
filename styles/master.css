@@ -67,7 +67,7 @@ nav{
     top: 0; left: 0;
     z-index: 10;
     height: 64px;
-    background: #fff8;
+    background: #fffa;
 }
 
 .nav-back{
@@ -75,8 +75,13 @@ nav{
     z-index: 9;
     height: 64px;
     background: #fff;
-    backdrop-filter: blur(20px);
-    mix-blend-mode: difference;
+}
+
+@supports(backdrop-filter: blur()){
+    .nav-back{
+        backdrop-filter: blur(10px);
+        mix-blend-mode: difference;
+    }
 }
 
 .navbar{
@@ -87,7 +92,6 @@ nav{
     padding: 0;
     border-bottom: 1px solid rgba(0, 0, 0, 0.15);
 } 
-
 
 /* LOGO */
 .logo{
@@ -104,13 +108,14 @@ nav{
 /* MENU*/
 .menu-list{
     display: flex;
-    flex-wrap:wrap;
+    flex-flow: row wrap;
 }
 
 .menu-item a{
     height: 64px;
     color: #111;
     font-size: 16px;
+    font-weight: 700;
     text-transform: uppercase;
     text-decoration: none;
     line-height: 64px;
@@ -119,8 +124,6 @@ nav{
 
 .menu-item a:hover{
     color: #0093E9;
-    /* border-bottom: 2px solid #0093E9; */
-    /* background: #ededed; */
 }
 
 /*SESSAO 1 - MAIN */
@@ -211,7 +214,6 @@ nav{
 }
 
 .skills li:hover{
-    user-select: none;
     /* cursor: pointer; */
     padding: .7em;
     margin: .3em;
@@ -345,9 +347,9 @@ nav{
 .bg-blue{ background: #0093E9; }
 .bg-invert{
     height: 48px;
-   background-color: whitesmoke;
-   mix-blend-mode: difference;
-   filter: invert(1);
+    background-color: whitesmoke;
+    mix-blend-mode: difference;
+    filter: invert(1);
 }
 
 /*AJUSTES DE LAYOUT PARA MOBILE*/ 
@@ -388,11 +390,11 @@ nav{
     .desc{
         padding: 0;
     }
-
+    
     .slide-wrapper{
         padding: 32px 0;
     }
-
+    
     .slide .thumb img{
         clip-path: none;
     }
