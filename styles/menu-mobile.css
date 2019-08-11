@@ -1,19 +1,20 @@
-.mobile-button{
-    display: none;
-}
+.mobile-button{ display: none; }
 
 @media (max-width: 768px){
+    .menu-list{ display: none; }   
+    
     .mobile-button{
         display: flex;
         align-items: center;
-        height: 48px;
+        height: 64px;
         padding: 0 1em;
+        line-height: 64px;
         font-family: 'Poppins', sans-serif;        
         font-size: 16px;
-        line-height: 48px;
+        font-weight: 700;
         text-transform: uppercase;
-        border: none;
         background: transparent;
+        border: none;
     }
     
     .mobile-button::before{
@@ -26,42 +27,41 @@
     }
     
     .mobile-button:hover::before, .mobile-button:focus::before{
-        background: #0093E9;
-        box-shadow: 0 5px #0093E9,0 -5px #0093E9;
+        background: #07E;
+        box-shadow: 0 5px #07E,0 -5px #07E;
     }
     
     .mobile-button:hover, .mobile-button:focus{
         outline: none;
-        color: #0093E9;
-        border-bottom: 2px solid #0093E9;
-        background: #ededed;
+        color: #07e;
+        background: #fffa;
         cursor: pointer;
     }
-    
-    .menu-list{
-        display: none;
-    }   
     
     .menu-list.active{
         display: inline-block;
         position: absolute;
-        top: 0; right: 0;
+        top: 0; left: 0;
         z-index: -2;
-        height: 100vh;
-        margin-top: 48px;
-        flex-flow: column wrap;
+        width: 100%;
+        margin-top: 64px;   
+        flex-flow: row wrap;
         text-align: right;
-        background: #fff;
+        background: #fffd;
+        backdrop-filter: blur(20px);
     }
     
-    .menu-list.active .menu-item a{
+    .menu-item{
+        animation: menulist 0.6s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+    }
+
+    .menu-item a{
         width: 100%;
         transition: none;
-        -webkit-animation: menulist 0.4s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
-        animation: menulist 0.4s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
     }
     
-    .menu-list.active a:hover{
+    .menu-item a:hover{
+        background: #fffa;
         border: none;
     }
     
@@ -69,18 +69,15 @@
 
 @keyframes menulist {
     0% {
+        height: 0;
         opacity: 0;
-        letter-spacing: -.5em;
-        width: 0vw;
     }
     40%{
-        opacity: 1;
-        letter-spacing: .2em;
-        width: 55vw;
+        opacity: .5;
     }
     100%{
-        letter-spacing: normal;
-        width: 50vw;
+        opacity: 1;
+        height: 64px;
     }
     
 }

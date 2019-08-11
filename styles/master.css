@@ -44,6 +44,10 @@ img {
     text-align: center;
 }
 
+.col img{
+    max-width: 280px;
+}
+
 .full{
     height: 100vh;
     min-height: 640px;
@@ -67,7 +71,7 @@ nav{
     top: 0; left: 0;
     z-index: 10;
     height: 64px;
-    background: #fffa;
+    background: #fffc;
 }
 
 .nav-back{
@@ -77,32 +81,28 @@ nav{
     background: #fff;
 }
 
-@supports(backdrop-filter: blur()){
-    .nav-back{
-        backdrop-filter: blur(10px);
-        mix-blend-mode: difference;
-    }
-}
-
 .navbar{
     display: flex;
     align-items: center;
     justify-content: space-between; 
     color: #111;
     padding: 0;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+    border-bottom: 1px solid #0002;
 } 
 
 /* LOGO */
 .logo{
-    font-size: 16px;
-    text-transform: uppercase;
     padding: 12px;
+    color: #111;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
     transition: .2s;
 }
 
 .logo:hover{
-    text-shadow: 0 2px 10px rgba(0, 147, 233, 0.5);
+    color: #07E;
+    text-shadow: 0 2px 10px #07EC;
 }
 
 /* MENU*/
@@ -123,7 +123,8 @@ nav{
 }
 
 .menu-item a:hover{
-    color: #0093E9;
+    color: #07E;
+    background: #fffa;
 }
 
 /*SESSAO 1 - MAIN */
@@ -140,14 +141,16 @@ nav{
 .main-name{
     position: absolute;
     z-index: 3;
+    color: #FFF;
     font-size: 5rem;
     font-weight: 900;
     text-align: center;
     text-transform: uppercase;
-    text-shadow: 0 0 10px rgba(255,255,255,.5);
-    color: #fff;
+    text-shadow: 0 0 .2em #fffa;
+    letter-spacing: 1px;
 }
 
+/* MAIN CONTAINER */
 .main img{
     position: absolute;
     width: 100%;
@@ -156,7 +159,7 @@ nav{
     padding: 32px 16px;
     object-fit: cover;
     z-index: 2;
-    opacity: .8;
+    opacity: .85;
 }
 
 [data-main="image"]{
@@ -165,16 +168,18 @@ nav{
     filter: grayscale(1);
 }
 
-
 .skills, .bio{
-    font-size: 18px;                                                                
+    font-size: 18px;                                                             
     color: #fff; 
 }
-.col img{
-    max-width: 280px;
+
+.bio p{
+    margin: 8px 0;
 }
 
+/* FORMAÇÕES */
 .formations{ text-align: center; }
+
 .formations dt{
     font-size: 22px;
     font-weight: 700;
@@ -191,6 +196,7 @@ nav{
     margin-bottom: 0;
 }
 
+/* HABILIDADES */
 .skills ul{
     display: flex;
     flex-flow: row wrap;
@@ -268,7 +274,7 @@ nav{
 .desc a{
     display: inline-block;
     margin-top: 8px;
-    padding: 10px 26px;
+    padding: .8em 1.4em;
     color: #fff;
     background: #111;
     font-size: 18px;
@@ -277,8 +283,8 @@ nav{
 }
 
 .desc a:hover{
-    background: rgb(0, 147, 233);
-    box-shadow: 0 0 1em rgba(0, 147, 233, .5);
+    background: #07E;
+    box-shadow: 0 0 1.2em #07EC;
     transition: .25s;    
 }
 
@@ -344,7 +350,7 @@ nav{
 /* BACKGROUNDS */
 .bg-white{ background: #fff; }
 .bg-black{ background: #111; }
-.bg-blue{ background: #0093E9; }
+.bg-blue{ background: #07E; }
 .bg-invert{
     height: 48px;
     background-color: whitesmoke;
@@ -359,14 +365,13 @@ nav{
         display: none;
     }
 }
-@media only screen and (max-width: 480px) {
+@media screen and (max-width: 480px) {
 }
-@media only screen and (max-width: 600px) {
+@media screen and (max-width: 600px) {
 }
-@media only screen and (max-width: 768px) {
+@media screen and (max-width: 768px) {
     .container, .slide-item{
         flex-flow: column;
-        /* justify-content: center; */
         text-align: center;
     }
     .navbar{
@@ -376,7 +381,7 @@ nav{
         height: 100%;
     }
     .skills {
-        flex-direction: column-reverse;
+        flex-direction: row-reverse;
     }
     .left, .right{
         text-align: center;
@@ -387,24 +392,35 @@ nav{
     .contact div:last-child{
         display: none;
     }
-    .desc{
-        padding: 0;
-    }
+
+    .desc{ padding: 0; }
     
-    .slide-wrapper{
-        padding: 32px 0;
-    }
+    .slide-wrapper{ padding: 32px 0; }
     
-    .slide .thumb img{
-        clip-path: none;
-    }
+    .slide .thumb img{ clip-path: none; }
 }
-@media only screen and (min-width: 992px) {
+@media screen and (max-width: 992px) {
 }
-@media only screen and (max-width: 1382px) {
+@media screen and (max-width: 1382px) {
 }
-@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+@media screen and (-webkit-min-device-pixel-ratio: 1.5),
 only screen and (min--moz-device-pixel-ratio: 1.5),
 only screen and (min-device-pixel-ratio: 1.5)
 {
+}
+
+@supports(backdrop-filter: blur()){
+    .nav-back{
+        backdrop-filter: blur(10px);
+    }
+    @media screen and (max-width: 768px){
+        .nav-back{
+            background: #fff8;
+        }
+    }
+    @media screen and (min-width: 768px){
+        .nav-back{
+            mix-blend-mode: difference;
+        }
+    }
 }
