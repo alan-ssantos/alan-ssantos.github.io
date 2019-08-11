@@ -380,8 +380,8 @@ nav{
     .mid{
         height: 100%;
     }
-    .skills {
-        flex-direction: row-reverse;
+    .skills .container {
+        flex-flow:  column-reverse wrap ;
     }
     .left, .right{
         text-align: center;
