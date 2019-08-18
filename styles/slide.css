@@ -1,0 +1,88 @@
+/*SESSAO 3 - PORTIFOLIO*/
+.slide-wrapper{
+    position: relative;
+    padding: 0;
+    overflow: hidden;
+}
+
+.slide{
+    display: flex;
+}
+
+.slide-item{
+    display: flex;
+    min-width: 95%;
+    margin-right: 1em;
+    justify-content: start;
+}
+
+.slide-item div{
+    flex: 1 1 0;
+}
+
+.thumb img{
+    height: 100%;
+    min-width: 100%;
+    object-fit: cover;
+    -webkit-clip-path: polygon(0 0, 99% 0, 92% 100%, 0% 100%);
+    clip-path: polygon(0 0, 99% 0, 92% 100%, 0% 100%);    
+}
+
+.desc{
+    align-self: center;
+    padding-left: 16px;
+}
+
+.desc h2, .desc p{
+    padding-right: calc(((100vw - 1180px) / 2));
+}
+
+.desc p{
+    margin: 8px 0;
+    font-size: 18px;
+    line-height: 1.4;
+}
+
+a.slide-link{
+    display: inline-block;
+    padding: .6em 1.2em;
+    margin-top: 8px;
+    min-height: 42px;
+    min-width: 64px;
+    color: #fff;
+    font-size: 18px;
+    background: rgb(0, 120, 240);
+    transition: .25s;    
+}
+
+a.slide-link:hover{
+    background: rgb(0, 95, 224); /* -25 -16 */  
+    box-shadow: 0 0 .6em rgba(0, 95, 224, 0.5);
+}
+
+a.slide-link:focus{
+    background: rgb(0, 70, 199);
+    box-shadow: 0 0 .6em rgba(0, 70, 199, 0.5);
+}
+
+.slide-list{
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    padding: 16px 0;
+}   
+
+li.slide-list-item{
+    width: 8px;
+    height: 8px;
+    border: 1px solid black;
+    border-radius: 100%;
+    margin: 0 8px;
+    transition: .2s;
+    cursor: pointer;
+}
+
+.slide-list li:hover{
+    padding: 4px;
+}

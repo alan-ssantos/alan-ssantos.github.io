@@ -19,15 +19,11 @@ export default class MainAnime {
 
   addEventMove() {
     document.body.addEventListener('mousemove', () => {
-      this.moveImage(event);
+      this.moveImage(window.event);
     });
   }
 
   init() {
-    if (this.main && this.image) {
-      this.addEventMove();
-    } else {
-      return this;
-    }
+    if (this.main && this.image) this.addEventMove();
   }
 }

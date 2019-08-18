@@ -2,19 +2,19 @@
 
 body{
     font-family: 'Poppins', sans-serif;
+    line-height: 1.5;
 }   
 
 h2{
     font-size: 36px;
     font-weight: 900;
-    line-height: 1.6;
     text-transform: uppercase;
 }
 
 p, a{
-    line-height: 1.4;
     text-decoration: none;
 }
+
 a{ display: inline-block; }
 
 img {
@@ -111,7 +111,7 @@ nav{
     flex-flow: row wrap;
 }
 
-.menu-item a{
+.menu-item > a{
     height: 64px;
     color: #111;
     font-size: 16px;
@@ -134,7 +134,7 @@ nav{
     flex-flow: column wrap;
     justify-content: center;
     align-items: center;
-    padding-top: 48px;
+    padding-top: 64px;
     overflow: hidden;
 }
 
@@ -156,6 +156,7 @@ nav{
     width: 100%;
     max-width: 1180px;
     min-height: 80%;
+    max-height: 80%;
     padding: 32px 16px;
     object-fit: cover;
     z-index: 2;
@@ -163,7 +164,6 @@ nav{
 }
 
 [data-main="image"]{
-    /* top: 15%; */
     z-index: 1 !important;
     filter: grayscale(1);
 }
@@ -228,88 +228,7 @@ nav{
     box-shadow: 0 0 10px #666;
 }
 
-/*SESSAO 3 - PORTIFOLIO*/
-.slide-wrapper{
-    position: relative;
-    padding: 0;
-}
 
-.slide{
-    display: flex;
-    /* height: 100%; */
-}
-
-.slide-item{
-    display: flex;
-    justify-content: start;
-}
-
-.slide-item div{
-    flex: 1 1 0;
-}
-
-.thumb img{
-    height: 100%;
-    min-width: 100%;
-    object-fit: cover;
-    -webkit-clip-path: polygon(0 0, 99% 0, 92% 100%, 0% 100%);
-    clip-path: polygon(0 0, 99% 0, 92% 100%, 0% 100%);    
-}
-
-.desc{
-    align-self: center;
-    padding-left: 16px;
-}
-
-.desc h2, .desc p{
-    padding-right: calc(((100vw - 1180px) / 2));
-}
-
-.desc p{
-    margin: 8px 0;
-    font-size: 18px;
-    line-height: 1.4;
-}
-
-.desc a{
-    display: inline-block;
-    margin-top: 8px;
-    padding: .8em 1.4em;
-    color: #fff;
-    background: #111;
-    font-size: 18px;
-    transition: .5s;
-    letter-spacing: 1px;
-}
-
-.desc a:hover{
-    background: #07E;
-    box-shadow: 0 0 1.2em #07EC;
-    transition: .25s;    
-}
-
-.slide-list{
-    position: absolute;
-    bottom: 0;
-    display: flex;
-    justify-content: center;
-    padding: 16px 0;
-}
-
-.slide-list li{
-    width: 8px;
-    height: 8px;
-    /* background: red; */
-    border: 1px solid black;
-    border-radius: 100%;
-    margin: 0 8px;
-    transition: .2s;
-    cursor: pointer;
-}
-
-.slide-list li:hover{
-    padding: 4px;
-}
 
 /* CONTATO */
 .contact{
@@ -322,7 +241,7 @@ nav{
     justify-content: center;
 }
 
-.contact a{ 
+a.contact-link{ 
     margin: 10px 0;
     color: #fff;
     font-size: 18px;
@@ -338,13 +257,6 @@ nav{
 .contact .image{
     text-align: center;
     max-width: 128px;
-}
-
-.contact li {
-    text-align: right;
-    text-transform: lowercase;
-    letter-spacing: 1px;    
-    margin: 4px 0;
 }
 
 /* BACKGROUNDS */
@@ -364,10 +276,6 @@ nav{
     .nav{
         display: none;
     }
-}
-@media screen and (max-width: 480px) {
-}
-@media screen and (max-width: 600px) {
 }
 @media screen and (max-width: 768px) {
     .container, .slide-item{
@@ -398,15 +306,6 @@ nav{
     .slide-wrapper{ padding: 32px 0; }
     
     .slide .thumb img{ clip-path: none; }
-}
-@media screen and (max-width: 992px) {
-}
-@media screen and (max-width: 1382px) {
-}
-@media screen and (-webkit-min-device-pixel-ratio: 1.5),
-only screen and (min--moz-device-pixel-ratio: 1.5),
-only screen and (min-device-pixel-ratio: 1.5)
-{
 }
 
 @supports(backdrop-filter: blur()){

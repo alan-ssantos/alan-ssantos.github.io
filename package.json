@@ -1,0 +1,35 @@
+{
+  "name": "alansantos",
+  "version": "1.0.0",
+  "description": "Meu primeiro portifólio.",
+  "main": "index.html",
+  "scripts": {
+    "dev": "webpack --mode development --watch",
+    "build": "webpack --mode production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlanSantos11/alanssantos.git"
+  },
+  "keywords": [
+    "Portifolio",
+    "Alan",
+    "Santos"
+  ],
+  "author": "Alan de Sousa Santos",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AlanSantos11/alanssantos/issues"
+  },
+  "homepage": "https://github.com/AlanSantos11/alanssantos#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^6.1.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.18.2",
+    "stylelint": "^10.1.0",
+    "stylelint-config-recommended": "^2.2.0",
+    "webpack": "^4.39.2",
+    "webpack-cli": "^3.3.6"
+  }
+}
