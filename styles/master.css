@@ -301,9 +301,9 @@ a.contact-link{
 
     .desc{ padding: 0; }
     
-    .slide-wrapper{ padding: 32px 0; }
-    
-    .slide .thumb img{ clip-path: none; }
+    .slide-wrapper{
+        padding: 32px 0;
+    }
 }
 
 @supports(backdrop-filter: blur()){
