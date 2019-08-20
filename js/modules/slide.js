@@ -138,8 +138,8 @@ export default class Slide {
     this.transition(false);
     this.addEvents();
     this.slidesConfig();
-    this.changeSlide(0);
     this.addResizeEvent();
+    this.changeSlide(0);
     return this;
   }
 }

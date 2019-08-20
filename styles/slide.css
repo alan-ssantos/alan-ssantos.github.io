@@ -1,26 +1,25 @@
 /*SESSAO 3 - PORTIFOLIO*/
 .slide-wrapper{
-    position: relative;
     padding: 0;
-    overflow: hidden;
     user-select: none;
+    overflow: hidden;
 }
 
 .slide{
     display: flex;
-    /* flex: 1 0 0; */
+}
+
+.slide:hover {
+  will-change: transform;
 }
 
 .slide-item{
     display: flex;
-    min-width: 80vw;
+    flex-shrink: 0;
+    width: 80vw;
     margin-right: 1em;
     justify-content: start;
 }
-
-/* .slide-item div{
-    flex: 1 1 0;
-} */
 
 .thumb{
   flex: 2 1 0;
@@ -31,8 +30,6 @@
     height: 100%;
     min-width: 100%;
     object-fit: cover;
-    /* -webkit-clip-path: polygon(0 0, 99% 0, 92% 100%, 0% 100%);
-    clip-path: polygon(0 0, 99% 0, 92% 100%, 0% 100%);     */
 }
 
 .desc{
@@ -62,7 +59,7 @@ a.slide-link:focus{
     box-shadow: 0 0 .6em rgba(0, 70, 199, 0.5);
 }
 
-.slide-list{
+/* .slide-list{
     position: absolute;
     bottom: 0;
     display: flex;
@@ -82,4 +79,4 @@ li.slide-list-item{
 
 .slide-list li:hover{
     padding: 4px;
-}
+} */
