@@ -146,6 +146,18 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 
 /***/ }),
 
+/***/ "./js/modules/slideNav.js":
+/*!********************************!*\
+  !*** ./js/modules/slideNav.js ***!
+  \********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return SlideNav; });\n/* harmony import */ var _slide_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./slide.js */ \"./js/modules/slide.js\");\n\n\nclass SlideNav extends _slide_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"] {\n  addArrow(prev, next) {\n    this.prev = document.querySelector(prev);\n    this.next = document.querySelector(next);\n    this.addArrowEvents();\n  }\n\n  addArrowEvents() {\n    this.prev.addEventListener('click', this.prevSlide);\n    this.next.addEventListener('click', this.nextSlide);\n  }\n}\n\n\n//# sourceURL=webpack:///./js/modules/slideNav.js?");
+
+/***/ }),
+
 /***/ "./js/modules/smooth-scroll.js":
 /*!*************************************!*\
   !*** ./js/modules/smooth-scroll.js ***!
@@ -166,7 +178,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_smooth_scroll_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/smooth-scroll.js */ \"./js/modules/smooth-scroll.js\");\n/* harmony import */ var _modules_mobile_menu_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/mobile-menu.js */ \"./js/modules/mobile-menu.js\");\n/* harmony import */ var _modules_main_anime_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/main-anime.js */ \"./js/modules/main-anime.js\");\n/* harmony import */ var _modules_slide_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/slide.js */ \"./js/modules/slide.js\");\n\n\n\n\n\nconst smoothScroll = new _modules_smooth_scroll_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"]('[data-menu=\"smooth\"] a[href^=\"#\"]');\nsmoothScroll.init();\n\nconst mobileMenu = new _modules_mobile_menu_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"]('.menu', '.mobile-button', '.menu-list');\nmobileMenu.init();\n\nconst mainAnime = new _modules_main_anime_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"]('#main', '[data-main=\"image\"]');\nmainAnime.init();\n\nconst slide = new _modules_slide_js__WEBPACK_IMPORTED_MODULE_3__[\"default\"]('.slide-wrapper', '.slide');\nslide.init();\n\n\n//# sourceURL=webpack:///./js/script.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_smooth_scroll_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/smooth-scroll.js */ \"./js/modules/smooth-scroll.js\");\n/* harmony import */ var _modules_mobile_menu_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/mobile-menu.js */ \"./js/modules/mobile-menu.js\");\n/* harmony import */ var _modules_main_anime_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/main-anime.js */ \"./js/modules/main-anime.js\");\n/* harmony import */ var _modules_slideNav_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/slideNav.js */ \"./js/modules/slideNav.js\");\n\n\n\n// import Slide from './modules/slide.js';\n\n\nconst smoothScroll = new _modules_smooth_scroll_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"]('[data-menu=\"smooth\"] a[href^=\"#\"]');\nsmoothScroll.init();\n\nconst mobileMenu = new _modules_mobile_menu_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"]('.menu', '.mobile-button', '.menu-list');\nmobileMenu.init();\n\nconst mainAnime = new _modules_main_anime_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"]('#main', '[data-main=\"image\"]');\nmainAnime.init();\n\n// const slide = new Slide('.slide-wrapper', '.slide');\nconst slideNav = new _modules_slideNav_js__WEBPACK_IMPORTED_MODULE_3__[\"default\"]('.slide-wrapper', '.slide');\nslideNav.init();\nslideNav.addArrow('.prev', '.next');\n\n\n//# sourceURL=webpack:///./js/script.js?");
 
 /***/ }),
 

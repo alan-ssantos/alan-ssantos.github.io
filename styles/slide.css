@@ -1,17 +1,15 @@
 /*SESSAO 3 - PORTIFOLIO*/
 .slide-wrapper{
-    padding: 0;
+    position: relative;
+    display: flex;
+    align-content: center;
     user-select: none;
     overflow: hidden;
 }
 
-.slide{
-    display: flex;
-}
+.slide{ display: flex; }
 
-.slide:hover {
-  will-change: transform;
-}
+.slide:hover { will-change: transform; }
 
 .slide-item{
     display: flex;
@@ -51,32 +49,42 @@ a.slide-link{
 
 a.slide-link:hover{
     background: rgb(0, 95, 224); /* -25 -16 */  
-    box-shadow: 0 0 .6em rgba(0, 95, 224, 0.5);
+    box-shadow: 0 0 .8em rgba(0, 95, 224, 0.65);
 }
 
 a.slide-link:focus{
     background: rgb(0, 70, 199);
-    box-shadow: 0 0 .6em rgba(0, 70, 199, 0.5);
+    box-shadow: 0 0 .8em rgba(0, 70, 199, 0.65);
 }
 
-/* .slide-list{
+button.slide-nav{
     position: absolute;
-    bottom: 0;
-    display: flex;
-    justify-content: center;
-    padding: 16px 0;
-}   
-
-li.slide-list-item{
-    width: 8px;
-    height: 8px;
-    border: 1px solid black;
-    border-radius: 100%;
-    margin: 0 8px;
-    transition: .2s;
-    cursor: pointer;
+    top: 50%;
+    width: 48px;
+    height: 48px;
+    transform: translateY(-50%);
+    background: #333;
+    border: none;
+    border-radius: 50%;
+    transition: .25s;
 }
 
-.slide-list li:hover{
-    padding: 4px;
-} */
+button.slide-nav:hover{
+    cursor: pointer;
+    background: #111;
+    box-shadow: 0 0 .8em rgba(17, 17, 17, 0.65);
+}
+
+button.slide-nav > i{
+    color: #fff;
+    font-size: 1em;
+    line-height: 48px;
+}
+
+.prev{
+    left: 16px;
+}
+
+.next{
+    right: 16px;
+}
