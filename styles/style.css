@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,700,900&display=swap');
 
 @import 'master.css';
+@import 'slide.css';
 @import 'menu-mobile.css';
-@import 'slide.css'
+@import 'contact.css';

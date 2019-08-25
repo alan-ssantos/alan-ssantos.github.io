@@ -14,47 +14,28 @@
 .slide-item{
     display: flex;
     flex-shrink: 0;
-    width: 80vw;
+    width: 100%;
+    max-width: 1180px;
     margin-right: 1em;
     justify-content: start;
 }
 
 .thumb{
   flex: 2 1 0;
-  padding-right: 1em;
+  margin: 32px;
 }
 
 .thumb img{
     height: 100%;
     min-width: 100%;
     object-fit: cover;
+    border-radius: .6em;
+    box-shadow: 0 0 24px rgba(0, 0, 0, 0.3);
 }
 
 .desc{
     align-self: center;
     flex: 1 1 0;
-}
-
-a.slide-link{
-    display: inline-block;
-    padding: .6em 1.2em;
-    margin-top: 8px;
-    min-height: 42px;
-    min-width: 64px;
-    color: #fff;
-    font-size: 18px;
-    background: rgb(0, 120, 240);
-    transition: .25s;    
-}
-
-a.slide-link:hover{
-    background: rgb(0, 95, 224); /* -25 -16 */  
-    box-shadow: 0 0 .8em rgba(0, 95, 224, 0.65);
-}
-
-a.slide-link:focus{
-    background: rgb(0, 70, 199);
-    box-shadow: 0 0 .8em rgba(0, 70, 199, 0.65);
 }
 
 button.slide-nav{
@@ -81,10 +62,6 @@ button.slide-nav > i{
     line-height: 48px;
 }
 
-.prev{
-    left: 16px;
-}
+.prev{ left: 32px; }
 
-.next{
-    right: 16px;
-}
+.next{ right: 32px; }

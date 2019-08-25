@@ -11,11 +11,10 @@ h2{
     text-transform: uppercase;
 }
 
-p, a{
+a{ 
+    display: inline-block;
     text-decoration: none;
 }
-
-a{ display: inline-block; }
 
 img {
     max-width: 100%;
@@ -44,9 +43,9 @@ img {
     text-align: center;
 }
 
-.col img{
+/* .col img{
     max-width: 280px;
-}
+} */
 
 .full{
     height: 100vh;
@@ -55,12 +54,14 @@ img {
 }
 
 .mid{
-    /* height: 50vh; */
-    min-height: 460px;
+    min-height: 560px;
     padding: 32px 0;
 }
 
-.auto{ padding: 32px 0; }
+.auto{
+    min-height: 360px;
+    padding: 32px 0;
+}
 
 .left{ text-align: left; }
 .right{ text-align: right; }
@@ -95,14 +96,14 @@ nav{
     padding: 12px;
     color: #111;
     font-size: 16px;
-    font-weight: 700;
+    font-weight: 7800;
     text-transform: uppercase;
-    transition: .2s;
+    transition: .25s;
 }
 
 .logo:hover{
     color: #07E;
-    text-shadow: 0 2px 10px #07EC;
+    text-shadow: 0 0 10px #07EC;
 }
 
 /* MENU*/
@@ -146,7 +147,7 @@ nav{
     font-weight: 900;
     text-align: center;
     text-transform: uppercase;
-    text-shadow: 0 0 .2em #fffa;
+    text-shadow: 0 0 .2em #0005;
     letter-spacing: 1px;
 }
 
@@ -159,23 +160,31 @@ nav{
     max-height: 80%;
     padding: 32px 16px;
     object-fit: cover;
-    z-index: 2;
+    z-index: 1;
     opacity: .85;
 }
 
 [data-main="image"]{
-    z-index: 1 !important;
+    z-index: 0 !important;
     filter: grayscale(1);
 }
 
-.skills, .bio{
-    font-size: 18px;                                                             
-    color: #fff; 
+/* BIO */
+.col img{
+    max-width: 360px;
+    margin: 32px;
+    object-fit: cover;
+    border-radius: .4em;
+    box-shadow: 0 0 24px #0003;
+    filter: grayscale(1);
+    transition: .25s;
 }
 
-.bio p{
-    margin: 8px 0;
+.col img:hover{
+    filter: none;
 }
+
+/* PORTIFOLIO >> IMPORT*/
 
 /* FORMAÇÕES */
 .formations{ text-align: center; }
@@ -189,7 +198,6 @@ nav{
 }
 .formations dd{
     font-size: 18px;
-    font-weight: lighter;
     margin-bottom: 26px;
 }
 .formations dd:last-child{
@@ -210,7 +218,6 @@ nav{
     margin: .5em;
     background: #222;
     color: #fff;
-    letter-spacing: 1px;
     transition: .2s ease-in-out;
 }
 
@@ -220,7 +227,6 @@ nav{
 }
 
 .skills li:hover{
-    /* cursor: pointer; */
     padding: .7em;
     margin: .3em;
     background: #fff;
@@ -228,80 +234,66 @@ nav{
     box-shadow: 0 0 10px #666;
 }
 
-/* CONTATO */
-.contact{
-    flex-flow: row wrap;
-    justify-content: center;
-    align-content: center;
-}
-
-.contact .col{
-    justify-content: center;
-}
-
-a.contact-link{ 
-    margin: 10px 0;
-    color: #fff;
-    font-size: 18px;
-    text-decoration: none;
-    transition: .25s;
-    letter-spacing: 1px;
-}
-
-.contact a:hover{
-    color: #efefef;
-}
-
-.contact .image{
-    text-align: center;
-    max-width: 128px;
-}
+/* CONTATO >> IMPORT*/
 
 /* BACKGROUNDS */
-.bg-white{ background: #fff; }
-.bg-black{ background: #111; }
-.bg-blue{ background: #07E; }
-.bg-invert{
-    height: 48px;
-    background-color: whitesmoke;
-    mix-blend-mode: difference;
-    filter: invert(1);
+.btn{
+    display: inline-block;
+    padding: .6em 1.2em;
+    margin-top: 8px;
+    min-height: 42px;
+    min-width: 64px;
+    font-size: 18px;
+    transition: .25s;   
+    border: 0;
+    /* border-radius: 4px;  */
 }
 
-/*AJUSTES DE LAYOUT PARA MOBILE*/ 
+.btn-default{
+    color: #fff;
+    background: rgb(0, 120, 240);
+}
 
+.btn-default:hover{
+    background: rgb(0, 95, 224); /* -25 -16 */  
+    box-shadow: 0 0 .8em rgba(0, 95, 224, 0.65);
+}
+
+.btn-default:focus{
+    background: rgb(0, 70, 199);
+    box-shadow: 0 0 .8em rgba(0, 70, 199, 0.65);
+}
+
+.bg-white{ background: #fff; color: #111}
+.bg-black{ background: #111; color: #fff}
+.bg-blue{ background: #07E; }
+
+/*AJUSTES DE LAYOUT PARA MOBILE*/ 
 @media print {
     .nav{
         display: none;
     }
 }
+
 @media screen and (max-width: 768px) {
-    .container, .slide-item{
-        flex-flow: column;
+    .container:not(.navbar), .slide-item{
+        flex-flow: column wrap;
         text-align: center;
     }
-    .navbar{
-        flex-flow: row wrap;
-    }
-    .mid{
-        height: 100%;
-    }
-    .skills .container {
+    
+    .mid{ height: 100%; }
+    
+    .col img{ margin: 32px 0; }
+    
+    .skills.container {
         flex-flow:  column-reverse wrap ;
     }
+    
     .left, .right{
         text-align: center;
     }
-    .col img{
-        margin: 32px 0;
-    }
-    .contact div:last-child{
-        display: none;
-    }
-
-    .desc{ padding: 0; }
     
-
+    .desc{ padding: 0; }
 }
 
 @supports(backdrop-filter: blur()){

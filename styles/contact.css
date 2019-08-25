@@ -1,0 +1,54 @@
+a.contact-link{ 
+  margin: 10px 0;
+  color: #fff;
+  font-size: 18px;
+  text-decoration: none;
+  transition: color .25s;
+}
+
+a.contact-link:hover{
+  color: #07E;
+  text-shadow: 0 0px 10px #07E9;
+}
+
+.form-group{
+  color: #FFF;
+  margin-bottom: 8px;
+}
+
+label.form-label{
+  display: block;
+}
+
+input.form-input, textarea.form-input{
+  width: 100%;
+  min-height: 32px;
+  padding: 8px;
+  resize: none;
+  color: #DDD;
+  font-family: 'Poppins', sans-serif;
+  background: transparent;
+  border: 1px solid #aaa;
+  transition: border .25s;
+}
+
+input.form-input:hover, textarea.form-input:hover{
+  border-color: #FFF;
+}
+
+span.input-msg{
+  color: #888;
+  font-size: 12px;
+  line-height: 1.5;
+  vertical-align: middle;
+}
+
+.error{
+  color: red !important;
+  border-color: red !important;
+}
+
+.success{
+  color: greenyellow !important;
+  border-color: greenyellow !important;
+}
