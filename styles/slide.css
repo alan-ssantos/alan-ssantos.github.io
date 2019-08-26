@@ -14,9 +14,10 @@
 .slide-item{
     display: flex;
     flex-shrink: 0;
-    width: 100%;
+    width: 80vw;
+    min-width: 280px;
     max-width: 1180px;
-    margin-right: 1em;
+    /* margin-right: 1em; */
     justify-content: start;
 }
 

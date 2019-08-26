@@ -8,7 +8,7 @@ a.contact-link{
 
 a.contact-link:hover{
   color: #07E;
-  text-shadow: 0 0px 10px #07E9;
+  text-shadow: 0 0px 16px #07EA;
 }
 
 .form-group{
@@ -28,12 +28,13 @@ input.form-input, textarea.form-input{
   color: #DDD;
   font-family: 'Poppins', sans-serif;
   background: transparent;
-  border: 1px solid #aaa;
+  border: 1px solid #999;
+  border-radius: 4px;
   transition: border .25s;
 }
 
 input.form-input:hover, textarea.form-input:hover{
-  border-color: #FFF;
+  border-color: #DDD;
 }
 
 span.input-msg{
@@ -51,4 +52,20 @@ span.input-msg{
 .success{
   color: greenyellow !important;
   border-color: greenyellow !important;
+}
+
+@media screen and (max-width: 768px){
+  
+  form{
+    width: 80%;
+    margin: 0 auto;
+    text-align: left;
+    margin-bottom: 32px;
+  }
+}
+
+@media screen and (max-width: 576px){
+  form{
+    width: 100%;
+  }
 }

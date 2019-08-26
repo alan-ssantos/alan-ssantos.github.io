@@ -1,5 +1,7 @@
 .mobile-button{ display: none; }
 
+
+
 @media (max-width: 768px){
     .menu-list{ display: none; }   
     
@@ -53,12 +55,12 @@
     }
     
     .menu-item{
-        animation: menulist 0.6s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+        animation: menulist .6s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
     }
 
     .menu-item a{
         width: 100%;
-        transition: none;
+        transition: .25s;
     }
     
     .menu-item a:hover{
