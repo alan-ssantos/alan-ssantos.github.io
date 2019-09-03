@@ -68,7 +68,8 @@ span.input-msg{
     margin-bottom: 32px;
   }
   .linkedin{
-    display: block;
+    flex-flow: row;
+    text-align: initial;
   }
 }
 
