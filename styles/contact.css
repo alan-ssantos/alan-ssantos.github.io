@@ -67,6 +67,9 @@ span.input-msg{
     text-align: left;
     margin-bottom: 32px;
   }
+  .linkedin{
+    display: block;
+  }
 }
 
 @media screen and (max-width: 576px){

@@ -45,7 +45,7 @@ img {
 
 .col img{
     min-width: 250px;
-    max-width: 380px;
+    max-width: 360px;
     margin: 32px;
     border-radius: .4em;
     object-fit: cover;
