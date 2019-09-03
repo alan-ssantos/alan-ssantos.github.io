@@ -1,9 +1,10 @@
 import debounce from './debounce.js';
 
 export default class Slide {
-  constructor(wrapper, slide) {
+  constructor(wrapper, slide, time) {
     this.wrapper = document.querySelector(wrapper);
     this.slide = document.querySelector(slide);
+    this.time = time;
     this.dist = {
       finalX: 0,
       startX: 0,
@@ -121,6 +122,7 @@ export default class Slide {
   addResizeEvent() {
     window.addEventListener('resize', this.onResize);
   }
+
 
   bindEvents() {
     this.onStart = this.onStart.bind(this);

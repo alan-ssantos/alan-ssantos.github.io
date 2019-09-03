@@ -14,6 +14,6 @@ const mainAnime = new MainAnime('#main', '[data-main="image"]');
 mainAnime.init();
 
 // const slide = new Slide('.slide-wrapper', '.slide');
-const slideNav = new SlideNav('.slide-wrapper', '.slide');
+const slideNav = new SlideNav('.slide-wrapper', '.slide', 5000);
 slideNav.init();
 slideNav.addArrow('.prev', '.next');

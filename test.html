@@ -65,5 +65,25 @@
         <div class="col sol">
         </div>
     </div>
+
+    <form action="#">
+        <h2>Entre Contato</h2>
+
+        <div class="form-group">
+            <label for="id-name" class="form-label success">Nome: </label>
+            <input type="text" id="id-name" name="name" class="form-input success" required="required">
+            <span class="input-msg success"><i class="fas fa-info-circle"></i> José João da Silva</span>
+        </div>
+        <div class="form-group">
+            <label for="id-email" class="form-label error">Email: </label>
+            <input type="email" id="id-email" name="emails" class="form-input error" required="required">
+            <span class="input-msg error"><i class="fas fa-info-circle"></i> josejoao@email.com</span>
+        </div>
+        <div class="form-group">
+            <label for="id-msg" class="form-label">Mensagem: </label>
+            <textarea name="msg" id="id-msg" rows="5" class="form-input" required="required"></textarea>
+        </div>
+        <button type="submit" class="btn btn-grey">Enviar</button>
+    </form>
 </body>
 </html>
