@@ -300,15 +300,13 @@ nav{
 
 @media screen and (max-width: 768px) {
     .container:not(.navbar), .slide-item{
+        flex-flow: column;
         justify-content: center;
         text-align: center;
     }
     
     .mid{ height: 100%; }
 
-    .col{
-        width: 100%;
-    }
     
     .col img{
         margin: 0;
