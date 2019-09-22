@@ -9,6 +9,7 @@ h2{
     font-size: 36px;
     font-weight: 900;
     text-transform: uppercase;
+    margin-bottom: 16px;
 }
 
 a{ 
@@ -45,16 +46,19 @@ img {
 
 .col img{
     min-width: 260px;
-    max-width: 380px;
+    max-width: 360px;
     margin: 32px;
     border-radius: .4em;
     object-fit: cover;
+}
+
+.profile{
     filter: grayscale(1);
     box-shadow: 0 0 24px #0003;
     transition: .25s;
 }
 
-.col img:hover{
+.profile:hover{
     filter: grayscale(0);
 }
 
@@ -182,6 +186,17 @@ nav{
     filter: grayscale(1);   
 }
 
+[data-animate="scroll"]{
+    opacity: 0;
+    transform: translateY(30px);
+    transition: .6s;
+}
+
+[data-animate="scroll"].active{
+    opacity: 1;
+    transform: translateY(0);
+}
+
 /* BIO */
 
 /* PORTIFOLIO >> IMPORT*/
@@ -220,6 +235,13 @@ nav{
     margin: .5em;
     color: #fff;
     transition: .2s ease-in-out;
+    user-select: none;
+}
+
+.first{
+    /* flex-basis: 100%; */
+    justify-content: center;
+    opacity: .5;
 }
 
 .skills li i{
@@ -227,7 +249,7 @@ nav{
     margin-right: .5em;
 }
 
-.skills li:hover{
+.skills li:hover:not(.first){
     padding: .7em;
     margin: .3em;
     background: #fff;
@@ -311,7 +333,7 @@ nav{
     .col img{
         margin: 0;
         margin-bottom: 32px;
-        max-width: 100%;
+        max-width: 360px;
     }
     
     .left, .right{

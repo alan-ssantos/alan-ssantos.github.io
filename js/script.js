@@ -1,11 +1,14 @@
 import SmoothScroll from './modules/smooth-scroll.js';
+import AnimateScroll from './modules/animateScroll';
 import MobileMenu from './modules/mobile-menu.js';
 import MainAnime from './modules/main-anime.js';
-// import Slide from './modules/slide.js';
 import SlideNav from './modules/slideNav.js';
 
 const smoothScroll = new SmoothScroll('[data-menu="smooth"] a[href^="#"]');
 smoothScroll.init();
+
+const animateScroll = new AnimateScroll('[data-animate="scroll"]');
+animateScroll.init();
 
 const mobileMenu = new MobileMenu('.menu', '.mobile-button', '.menu-list');
 mobileMenu.init();
