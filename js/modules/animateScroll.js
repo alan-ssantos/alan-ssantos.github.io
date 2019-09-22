@@ -4,7 +4,6 @@ export default class AnimateScroll {
   }
 
   animate() {
-    console.log('oi');
     this.halfWindowHeight = window.innerHeight * 0.6;
 
     this.sections.forEach((section) => {

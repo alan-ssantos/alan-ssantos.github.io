@@ -4,17 +4,18 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" href="./images/welcome.png"/>
 	
 	<!-- Primary Meta Tags -->
-	<title>Alan Santos - Portifólio</title>
+	<title>Alan Santos</title>    
 	<meta name="title" content="Alan Santos - Portifólio">
 	<meta name="description" content="Sou desenvolvedor Front-End e estudante de Análise e Desenvolvimento de Sistemas pela FIAP">
 	
 	<link rel="stylesheet" href="styles/style.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
 	integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
 	<script>document.documentElement.className += ' js'</script>
-	<title>Alan Santos</title>    
 </head>
 <body>
 	<nav class="container-fluid">
@@ -23,7 +24,7 @@
 				<a class="logo" href="#main">AS</a>
 			</div>
 			<div class="menu">
-				<button class="mobile-button" data-menu="mobile" aria-expanded="false" aria-controls="menu-list">Menu</button>
+				<button class="mobile-button" data-menu="mobile" aria-label="Botão de Menu" aria-expanded="false" aria-controls="menu-list">Menu</button>
 				<ul class='menu-list' data-menu="list" id="menu-list">
 					<li class="menu-item"><a href="#about">Quem sou</a></li>
 					<li class="menu-item"><a href="#portifolio">Portifólio</a></li>
@@ -47,7 +48,7 @@
 	<div class="container-fluid mid bio" id="about" data-animate="scroll">
 		<div class="container">
 			<div class="col">
-				<img src="images/a4.jpg" alt="Perfil - Quem sou" class="profile">
+				<img src="images/a4.webp" alt="Perfil - Quem sou" class="profile">
 			</div>
 			<div class="col left">
 				<h2>Quem sou</h2>
@@ -69,12 +70,12 @@
 						<p>
 							Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, sed ipsa animi voluptatum quae veritatis labore vero eum corrupti dolorem error. A voluptatibus non sunt aliquid. Aut sit inventore culpa?
 						</p>
-						<a href="https://alansantos11.github.io/expCards/" class="btn btn-default   ">Visitar</a>
+						<a href="https://alansantos11.github.io/expCards/" class="btn btn-default">Visitar</a>
 					</div>
 				</li>
 				<li class="slide-item">
 					<div class="thumb">
-						<img src="images/porti/caputi.png" alt="Projeto Leticia Caputi">
+						<img src="images/porti/caputi.webp" alt="Projeto Leticia Caputi">
 					</div>
 					<div class="desc">
 						<h2>Divã</h2>
@@ -99,8 +100,8 @@
 					</div>
 				</li>
 			</ul>
-			<button class="slide-nav prev"><i class="fas fa-long-arrow-alt-left"></i></button>
-			<button class="slide-nav next"><i class="fas fa-long-arrow-alt-right"></i></button>
+			<button class="slide-nav prev" aria-label="Botão de Próximo"><i class="fas fa-long-arrow-alt-left"></i></button>
+			<button class="slide-nav next" aria-label="Botão de Anterior"><i class="fas fa-long-arrow-alt-right"></i></button>
 		</div>
 		<!-- END PORTIFOLIO -->
 		
@@ -117,19 +118,14 @@
 					
 					<ul>
 						<li class="first"><p>Back-End:</p></li>
-						<!-- <li><i class="fab fa-react"></i><p>React</p></li> -->
-						<!-- <li><i class="fab fa-node"></i> <p>Node</p></li> -->
-						<!-- <li><i class="fab fa-vuejs"></i> <p>Vue</p></li> -->
-						<!-- <li><i class="fab fa-sass"></i> <p>Sass</p></li> -->
 						<li><i class="fas fa-leaf"></i> <p>Spring</p></li>
 						<li><i class="fas fa-globe"></i> <p>.NET</p></li>
 						<li><i class="fas fa-server"></i> <p>Banco de dados</p> </li>
-						
-						<ul>
-							<li class="first"><p>Outros:</p></li>
-							<li><i class="fab fa-android"></i> <p>Android</p></li>
-							<li><i class="fab fa-adobe"></i> <p>Photoshop</p></li>
-						</ul>
+					</ul>
+					<ul>
+						<li class="first"><p>Outros:</p></li>
+						<li><i class="fab fa-android"></i> <p>Android</p></li>
+						<li><i class="fab fa-adobe"></i> <p>Photoshop</p></li>
 					</ul>
 				</div>
 				<div class="col">
