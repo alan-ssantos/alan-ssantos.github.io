@@ -4,18 +4,23 @@ export default class AnimateScroll {
   }
 
   animate() {
+    console.log('oi');
     this.halfWindowHeight = window.innerHeight * 0.6;
 
     this.sections.forEach((section) => {
       const distFromTop = section.getBoundingClientRect().top;
       const isSectionVisible = (distFromTop - this.halfWindowHeight) < 0;
 
-      if (isSectionVisible) section.classList.add('active');
+      if (isSectionVisible) {
+        section.classList.add('active');
+      } else {
+        section.classList.remove('active');
+      }
     });
   }
 
   addEvents() {
-    window.addEventListener('scroll', this.animate);
+    window.addEventListener('scroll', this.animate, { passive: true });
   }
 
   bind() {
@@ -24,7 +29,6 @@ export default class AnimateScroll {
 
   init() {
     if (this.sections.length > 0) {
-      console.log(this.sections);
       this.bind();
       this.addEvents();
       this.animate();

@@ -1,5 +1,11 @@
+.links{
+  display: flex;
+  flex-flow: column;
+  justify-content: center;  
+}
+
 a.contact-link{ 
-  margin: 10px 0;
+  margin-bottom: 16px;
   color: #fff;
   font-size: 18px;
   text-decoration: none;
@@ -17,68 +23,9 @@ a.contact-link:hover{
   box-shadow: 0 0 10px rgba(192, 192, 192, 0.65);
 }
 
-.form-group{
-  color: #FFF;
-  margin-bottom: 8px;
-}
-
-label.form-label{
-  display: block;
-}
-
-input.form-input, textarea.form-input{
-  width: 100%;
-  min-height: 32px;
-  padding: 8px;
-  resize: none;
-  color: #DDD;
-  font-family: 'Poppins', sans-serif;
-  background: transparent;
-  border: 1px solid #999;
-  border-radius: 4px;
-  transition: border .25s;
-}
-
-input.form-input:hover, textarea.form-input:hover{
-  border-color: #DDD;
-}
-
-span.input-msg{
-  color: #888;
-  font-size: 12px;
-  line-height: 1.5;
-  vertical-align: middle;
-}
-
-.error{
-  color: red !important;
-  border-color: red !important;
-}
-
-.success{
-  color: greenyellow !important;
-  border-color: greenyellow !important;
-}
-
 @media screen and (max-width: 768px){
-  form{
-    width: 80%;
-    margin: 0 auto;
-    text-align: left;
-    margin-bottom: 32px;
-  }
   .linkedin{
     flex-flow: row;
     text-align: initial;
-  }
-}
-
-@media screen and (max-width: 576px){
-  form{
-    width: 100%;
-  }
-
-  .col{
-    height: auto !important;
   }
 }

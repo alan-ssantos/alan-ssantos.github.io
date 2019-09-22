@@ -1,7 +1,5 @@
 .mobile-button{ display: none; }
 
-
-
 @media (max-width: 768px){
     .menu-list{ display: none; }   
     
@@ -29,14 +27,14 @@
     }
     
     .mobile-button:hover::before, .mobile-button:focus::before{
-        background: #07E;
-        box-shadow: 0 5px #07E,0 -5px #07E;
+        background: #FFF;
+        box-shadow: 0 5px #FFF,0 -5px #FFF;
     }
     
     .mobile-button:hover, .mobile-button:focus{
         outline: none;
-        color: #07e;
-        background: #fffa;
+        color: #FFF;
+        background: #07EA;
         cursor: pointer;
     }
     
@@ -64,7 +62,7 @@
     }
     
     .menu-item a:hover{
-        background: #fffa;
+        background: #07E;
         border: none;
     }
     

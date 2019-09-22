@@ -139,9 +139,9 @@ nav{
 }
 
 .menu-item a:hover{
-    color: #07E;
-    background: #FFFA;
-    text-shadow: 0 0px 16px #07EA;
+    color: #FFF;
+    background: #07E;
+    text-shadow: 0 0px 8px #FFFA;
     transition: .25s;
 }
 
@@ -164,8 +164,8 @@ nav{
     font-weight: 900;
     text-align: center;
     text-transform: uppercase;
-    text-shadow: 0 0 .2em #0005;
-    letter-spacing: 1px;
+    text-shadow: 0 0 .2em #fff5;
+    /* letter-spacing: 1px; */
 }
 
 /* MAIN CONTAINER */
@@ -183,10 +183,10 @@ nav{
 
 [data-main="image"]{
     z-index: 0 !important;
-    filter: grayscale(1);   
+    filter: grayscale(1); 
 }
 
-[data-animate="scroll"]{
+.js [data-animate="scroll"]{
     opacity: 0;
     transform: translateY(30px);
     transition: .6s;
@@ -239,7 +239,6 @@ nav{
 }
 
 .first{
-    /* flex-basis: 100%; */
     justify-content: center;
     opacity: .5;
 }
@@ -328,7 +327,6 @@ nav{
     }
     
     .mid{ height: 100%; }
-
     
     .col img{
         margin: 0;
@@ -345,6 +343,10 @@ nav{
     }
     
     .desc{ padding: 0; }
+
+    .contact{
+        justify-content: space-around;
+    }
 }
 
 @supports(backdrop-filter: blur()){
