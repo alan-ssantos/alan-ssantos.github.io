@@ -9,7 +9,13 @@ h2{
 	font-size: 36px;
 	font-weight: 900;
 	text-transform: uppercase;
-	margin-bottom: 16px;
+	margin: 16px 0;
+}
+
+h3{
+	font-size: 28px;
+	font-weight: 700;
+	text-transform: uppercase;
 }
 
 a{ 
@@ -46,8 +52,8 @@ img {
 
 .col img{
 	min-width: 260px;
+	width: calc(100% - 16px);
 	max-width: 360px;
-	margin: 32px;
 	border-radius: .4em;
 	object-fit: cover;
 }
@@ -157,7 +163,6 @@ nav{
 }
 
 .main-name{
-	position: absolute;
 	z-index: 3;
 	color: #FFF;
 	font-size: 5rem;
@@ -165,7 +170,6 @@ nav{
 	text-align: center;
 	text-transform: uppercase;
 	text-shadow: 0 0 .2em #fff5;
-	/* letter-spacing: 1px; */
 }
 
 /* MAIN CONTAINER */
@@ -198,6 +202,9 @@ nav{
 }
 
 /* BIO */
+.about-thumb{
+	margin-right: 16px;
+}
 
 /* PORTIFOLIO >> IMPORT*/
 
@@ -330,8 +337,10 @@ nav{
 	
 	.col img{
 		margin: 0;
-		margin-bottom: 32px;
-		max-width: 360px;
+	}
+	
+	.about-thumb{
+		margin: 0;
 	}
 	
 	.left, .right{
